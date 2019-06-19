@@ -1,0 +1,19 @@
+#landing-section {
+  background: url('../images/landing-img.jpg') no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 100vh;
+  position: relative;
+
+}
+
+#landing-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(22, 42, 57, 0.431);
+  z-index: 1;
+}

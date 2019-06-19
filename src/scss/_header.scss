@@ -1,7 +1,9 @@
 header {
+  position: fixed;
+  z-index: 99;
 
   .top-panel {
-    background: #162A39;
+    background: rgba(22, 42, 57, 0.808);
 
     .top-panel-items-container {
       padding: 12px 0px;
@@ -40,6 +42,8 @@ header {
   }
 
   .header-container {
+    background: rgba(22, 42, 57, 0.472);
+
 
     .header-items-container {
       display: flex;
@@ -50,6 +54,8 @@ header {
       .branding {
         display: flex;
         align-items: center;
+        color: $primary-font-color;
+
 
         .branding-icon {
           font-size: 27px;
@@ -68,11 +74,13 @@ header {
       }
 
       nav {
+
         a {
           text-decoration: none;
           padding: 0px 20px;
           font-weight: 600;
-          color: black;
+          color: $primary-font-color;
+
         }
       }
     }
@@ -81,6 +89,8 @@ header {
   .info-block {
     text-align: right;
     font-size: 0.875rem;
+    color: $primary-font-color;
+
 
     .info-block-phone {
       display: flex;
