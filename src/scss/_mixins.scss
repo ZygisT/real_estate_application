@@ -1,0 +1,5 @@
+// Transition Speed
+
+@mixin transition-speed {
+  transition: all 300ms ease-in-out;
+}

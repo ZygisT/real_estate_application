@@ -1,0 +1,100 @@
+header {
+
+  .top-panel {
+    background: #162A39;
+
+    .top-panel-items-container {
+      padding: 12px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left-col {
+        color: #778289;
+        font-size: 12px;
+  
+        .highlight {
+          color: $primary-theme-color;
+          text-decoration: none;
+          font-weight: 200;
+        }
+      }
+  
+      .right-col {
+  
+        .social-media-icons {
+          font-size: 1.2rem;
+          color: $primary-theme-color;
+          margin-left: 20px;
+        }
+      }
+
+      .highlight, .social-media-icons {
+        @include transition-speed;
+      }
+  
+      .highlight:hover, .social-media-icons:hover {
+        color: $primary-font-color;
+      }
+    }
+  }
+
+  .header-container {
+
+    .header-items-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0px;
+
+      .branding {
+        display: flex;
+        align-items: center;
+
+        .branding-icon {
+          font-size: 27px;
+          margin-right: 5px;
+          color: $primary-theme-color;
+        }
+
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          
+          span {
+            font-weight: 300;
+          }
+        }
+      }
+
+      nav {
+        a {
+          text-decoration: none;
+          padding: 0px 20px;
+          font-weight: 600;
+          color: black;
+        }
+      }
+    }
+  }
+
+  .info-block {
+    text-align: right;
+    font-size: 0.875rem;
+
+    .info-block-phone {
+      display: flex;
+      align-items: center;
+      
+      .phone-icon {
+        font-size: 23px;
+        margin-right: 5px;
+        color: $primary-theme-color;
+
+      }
+      h4 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
