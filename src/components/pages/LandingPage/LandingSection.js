@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 export default class LandingSection extends Component {
   render() {
     return (
+
+      // Landing section start
       <section id='landing-section'>
         
         <div className="center-content">
@@ -23,6 +25,8 @@ export default class LandingSection extends Component {
         </div>
 
       </section>
+      // Landing section end
+
     )
   }
 }

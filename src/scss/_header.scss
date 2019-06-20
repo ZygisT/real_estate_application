@@ -1,10 +1,11 @@
 header {
-  position: fixed;
+  position: absolute;
+  top: 0;
   z-index: 99;
   width: 100%;
 
   .top-panel {
-    background: rgba(22, 42, 57, 0.863);
+    background: rgba(22, 42, 57, 0.774);
 
     .top-panel-items-container {
       padding: 12px 0px;
@@ -43,7 +44,7 @@ header {
   }
 
   .header-container {
-    background: rgba(22, 42, 57, 0.472);
+    // background: rgba(22, 42, 57, 0.472);
 
 
     .header-items-container {

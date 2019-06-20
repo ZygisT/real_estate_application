@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
-import LandingPage from '../components/pages/LandingPage';
-import ListingsPage from '../components/pages/ListingsPage';
-import ContactPage from '../components/pages/ContactPage';
-import AboutPage from '../components/pages/AboutPage';
-import BlogPage from '../components/pages/BlogPage';
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
     return (
-      <Router>
+        // Header start
         <header>
 
           {/* Top panel start */}
@@ -73,16 +68,8 @@ export default class Header extends Component {
           </div>
           {/* Header container end */}
 
-
         </header>
-
-
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/Listings/" component={ListingsPage} />
-        <Route path="/About/" component={AboutPage} />
-        <Route path="/Blog/" component={BlogPage} />
-        <Route path="/Contact/" component={ContactPage} />
-      </Router>
+        // Header end
     )
   }
 }
