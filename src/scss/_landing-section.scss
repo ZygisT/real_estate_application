@@ -2,9 +2,9 @@
   background: url('../images/landing-img.jpg') no-repeat;
   background-size: cover;
   background-position: left;
-  // height: 100vh;
   position: relative;
   z-index: 98;
+  filter: contrast(110%);
 
   .landing-section-items-container {
     height: 100vh;
@@ -40,12 +40,5 @@
 }
 
 #landing-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(22, 42, 57, 0.548);
-  z-index: -1;
+  @include image-overlay;
 }

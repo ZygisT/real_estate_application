@@ -4,7 +4,7 @@ import ListingsPage from '../components/pages/ListingsPage';
 import ContactPage from '../components/pages/ContactPage';
 import AboutPage from '../components/pages/AboutPage';
 import BlogPage from '../components/pages/BlogPage';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 
 export default class Header extends Component {
   render() {
@@ -46,11 +46,15 @@ export default class Header extends Component {
                 </div>
 
                 <nav>
-                  <Link className='nav-link' to="/">Home</Link>
-                  <Link className='nav-link' to="/Listings">Listings</Link>
-                  <Link className='nav-link' to="/About">About</Link>
-                  <Link className='nav-link' to="/Blog">Blog</Link>
-                  <Link className='nav-link' to="/Contact">Contact</Link>
+                  <NavLink exact={true} activeClassName='is-active' className='nav-link' to="/">Home</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Listings">Listings</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/About">About</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Blog">Blog</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Contact">Contact</NavLink>
                 </nav>
 
                 <div className="info-block">
