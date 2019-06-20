@@ -1,6 +1,7 @@
 header {
   position: fixed;
   z-index: 99;
+  width: 100%;
 
   .top-panel {
     background: rgba(22, 42, 57, 0.808);
@@ -76,11 +77,28 @@ header {
       nav {
 
         a {
+          position: relative;
           text-decoration: none;
-          padding: 0px 20px;
+          text-transform: uppercase;
+          margin: 0px 20px;
           font-weight: 600;
           color: $primary-font-color;
+          // overflow: hidden;
+        }
 
+        a::after {
+          content: '';
+          position: absolute;
+          width: 50%;
+          top: 20px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: $primary-theme-color;
+        }
+
+        a:hover > a::after {
+          width: 100%;
         }
       }
     }

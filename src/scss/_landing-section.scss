@@ -2,8 +2,40 @@
   background: url('../images/landing-img.jpg') no-repeat;
   background-size: cover;
   background-position: left;
-  height: 100vh;
+  // height: 100vh;
   position: relative;
+  z-index: 98;
+
+  .landing-section-items-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2, p  {
+      color: $primary-font-color;
+
+    }
+
+    h2 {
+      font-size: 70px;
+      line-height: 1.1;
+      width: 45%;
+      margin-bottom: 25px;
+    }
+
+    p {
+      width: 30%;
+    }
+
+    .primary-btn {
+      @include primary-btn;
+    }
+
+    .primary-btn:hover {
+      background: $primary-theme-color;
+    }
+  }
 
 }
 
@@ -14,6 +46,6 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(22, 42, 57, 0.431);
-  z-index: 1;
+  background: rgba(22, 42, 57, 0.548);
+  z-index: -1;
 }
