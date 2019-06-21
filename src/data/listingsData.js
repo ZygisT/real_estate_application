@@ -1,0 +1,154 @@
+let listingsData = [
+  {
+    address: "23-34 Grand Avenue",
+    city: "Ridgewood",
+    state: "NY",
+    homeType: "Single-Family House",
+    rooms: 4,
+    price: 220000,
+    floorSpace: 2000,
+    image: "../images/house-images/house-1",
+    status: 'Sale'
+  },
+  {
+    address: "10 Cherry Hill",
+    city: "Camden",
+    state: "NJ",
+    homeType: "Appartment",
+    rooms: 3,
+    price: 1800,
+    floorSpace: 2000,
+    image: "../images/house-images/house-2",
+    status: 'Rent'
+  },
+  {
+    address: "40 Soy Street",
+    city: "Soy Hills",
+    state: "FL",
+    homeType: "Ranch",
+    rooms: 2,
+    price: 175600,
+    floorSpace: 1200,
+    image:
+      "../images/house-images/house-3",
+    status: 'Sale'
+  },
+  {
+    address: "50 Collingswood Ave",
+    city: "Camden",
+    state: "NJ",
+    homeType: "Condo",
+    rooms: 4,
+    price: 140500,
+    floorSpace: 2305,
+    image:
+      "../images/house-images/house-4",
+    status: 'Sale'
+
+  },
+  {
+    address: "114 Willson Street",
+    city: "Woodvale",
+    state: "NB",
+    homeType: "Appartment",
+    rooms: 2,
+    price: 2850,
+    floorSpace: 1887,
+    image:
+      "../images/house-images/house-5",
+    status: 'Rent'
+
+  },
+  {
+    address: "55-60 Saint Peter Avenue",
+    city: "Maryland",
+    state: "CA",
+    homeType: "Condo",
+    rooms: 5,
+    price: 316000,
+    floorSpace: 3500,
+    image:
+      "../images/house-images/house-6",
+    status: 'Sale'
+  },
+  {
+    address: "99-101 Malcom Street",
+    city: "Ridgewood",
+    state: "NY",
+    homeType: "Studio",
+    rooms: 1,
+    price: 1590,
+    floorSpace: 1100,
+    image:
+      "../images/house-images/house-7",
+    status: 'Rent'
+
+  },
+  {
+    address: "99-105 Malcom Street",
+    city: "Ridgewood",
+    state: "NY",
+    homeType: "Single-Family House",
+    rooms: 5,
+    price: 189000,
+    floorSpace: 3000,
+    image:
+      "../images/house-images/house-8",
+    status: 'Sale'
+
+  },
+  {
+    address: "88 Saint Louis Avenue",
+    city: "Woodvale",
+    state: "NB",
+    homeType: "Studio",
+    rooms: 3,
+    price: 150000,
+    floorSpace: 1950,
+    image:
+      "../images/house-images/house-9",
+    status: 'Sale'
+
+  },
+  {
+    address: "125 Jade Street",
+    city: "Maryland",
+    state: "CA",
+    homeType: "Studio",
+    rooms: 4,
+    price: 109000,
+    floorSpace: 2090,
+    image:
+      "../images/house-images/house-10",
+    status: 'Sale'
+
+  },
+  {
+    address: "45 Sunflower Street",
+    city: "Soy Hills",
+    state: "FL",
+    homeType: "Studio",
+    rooms: 2,
+    price: 1500,
+    floorSpace: 2000,
+    image:
+      "../images/house-images/house-11",
+    status: 'Rent'
+
+  },
+  {
+    address: "10-11 Kings Street",
+    city: "Ridgewood",
+    state: "NY",
+    homeType: "Appartment",
+    rooms: 1,
+    price: 2200,
+    floorSpace: 1100,
+    image:
+      "../images/house-images/house-12",
+    status: 'Rent'
+
+  },
+];
+
+export default listingsData;
