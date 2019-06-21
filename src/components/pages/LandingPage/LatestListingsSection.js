@@ -25,15 +25,15 @@ export default class LatestOffers extends Component {
         <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
 
           <span className="listing-status">
-            Sale
+            {listing.status}
           </span>
 
         </div>
 
         <div className="listing-basic-details-container">
-          <h3 className='listing-price'>$1,200.00</h3>
+          <h3 className='listing-price'>${listing.price.toLocaleString()}</h3>
           <span className="listing-location">
-            {listing.address}
+            {listing.address}, {listing.city}, {listing.state}
           </span>
           <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
         </div>
