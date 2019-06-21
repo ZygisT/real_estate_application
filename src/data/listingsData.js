@@ -1,4 +1,4 @@
-let listingsData = [
+const listingsData = [
   {
     address: "23-34 Grand Avenue",
     city: "Ridgewood",
@@ -7,7 +7,7 @@ let listingsData = [
     rooms: 4,
     price: 220000,
     floorSpace: 2000,
-    image: "../images/house-images/house-1",
+    image: "./house-images/house-1.jpg",
     status: 'Sale'
   },
   {
@@ -18,7 +18,7 @@ let listingsData = [
     rooms: 3,
     price: 1800,
     floorSpace: 2000,
-    image: "../images/house-images/house-2",
+    image: "./house-images/house-2.jpg",
     status: 'Rent'
   },
   {
@@ -30,7 +30,7 @@ let listingsData = [
     price: 175600,
     floorSpace: 1200,
     image:
-      "../images/house-images/house-3",
+      "./house-images/house-3.jpg",
     status: 'Sale'
   },
   {
@@ -42,7 +42,7 @@ let listingsData = [
     price: 140500,
     floorSpace: 2305,
     image:
-      "../images/house-images/house-4",
+      "./house-images/house-4.jpg",
     status: 'Sale'
 
   },
@@ -55,7 +55,7 @@ let listingsData = [
     price: 2850,
     floorSpace: 1887,
     image:
-      "../images/house-images/house-5",
+      "./house-images/house-5.jpg",
     status: 'Rent'
 
   },
@@ -68,7 +68,7 @@ let listingsData = [
     price: 316000,
     floorSpace: 3500,
     image:
-      "../images/house-images/house-6",
+      "./house-images/house-6.jpg",
     status: 'Sale'
   },
   {
@@ -80,7 +80,7 @@ let listingsData = [
     price: 1590,
     floorSpace: 1100,
     image:
-      "../images/house-images/house-7",
+      "./house-images/house-7.jpg",
     status: 'Rent'
 
   },
@@ -93,7 +93,7 @@ let listingsData = [
     price: 189000,
     floorSpace: 3000,
     image:
-      "../images/house-images/house-8",
+      "./house-images/house-8.jpg",
     status: 'Sale'
 
   },
@@ -106,7 +106,7 @@ let listingsData = [
     price: 150000,
     floorSpace: 1950,
     image:
-      "../images/house-images/house-9",
+      "./house-images/house-9.jpg",
     status: 'Sale'
 
   },
@@ -119,7 +119,7 @@ let listingsData = [
     price: 109000,
     floorSpace: 2090,
     image:
-      "../images/house-images/house-10",
+      "./house-images/house-10.jpg",
     status: 'Sale'
 
   },
@@ -132,7 +132,7 @@ let listingsData = [
     price: 1500,
     floorSpace: 2000,
     image:
-      "../images/house-images/house-11",
+      "./house-images/house-11.jpg",
     status: 'Rent'
 
   },
@@ -145,7 +145,7 @@ let listingsData = [
     price: 2200,
     floorSpace: 1100,
     image:
-      "../images/house-images/house-12",
+      "./house-images/house-12.jpg",
     status: 'Rent'
 
   },

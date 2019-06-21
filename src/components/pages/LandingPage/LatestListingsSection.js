@@ -14,17 +14,34 @@ export default class LatestOffers extends Component {
     })
   }
 
-  // componentDidMount() {
-  //   console.log(this.state.data)
-  // }
+  listingsMapper = () => {
+    let listingsData = this.props.listingsData
 
-  // listingsMapper = () => {
-  //   let listingsData = this.props.listingsData
+    return listingsData.map((listing, i) => {
 
-  //   return listingsData.map((item, i) => {
-  //      return <li key={i}>{item.location}</li>
-  //   })
-  // }
+      return (
+        <div key={i} className="listing-card">
+
+        <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+
+          <span className="listing-status">
+            Sale
+          </span>
+
+        </div>
+
+        <div className="listing-basic-details-container">
+          <h3 className='listing-price'>$1,200.00</h3>
+          <span className="listing-location">
+            {listing.address}
+          </span>
+          <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
+        </div>
+
+     </div>
+      )
+    })
+  }
 
   
   
@@ -35,30 +52,7 @@ export default class LatestOffers extends Component {
         
         <div className="latest-listings-item-container">
 
-          {/* Listings Card Start */}
-          <div className="listing-card">
-
-            <div className="listing-img">
-
-              <span className="listing-status">
-                Sale
-              </span>
-
-            </div>
-
-            <div className="listing-basic-details-container">
-              <h3 className='listing-price'>$1,200.00</h3>
-              <span className="listing-location">
-                Street, State
-              </span>
-              <a href="#listing-basic-details-container">Read More</a>
-            </div>
-
-
-
-            
-          </div>
-          {/* Listings Card End */}
+          {this.listingsMapper()}
 
         </div>
 
