@@ -17,29 +17,56 @@ export default class LatestOffers extends Component {
   listingsMapper = () => {
     let listingsData = this.props.listingsData
 
-    return listingsData.map((listing, i) => {
+    return listingsData.slice(0, 5).map((listing, i) => {
 
-      return (
-        <div key={i} className="listing-card">
-
-        <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
-
-          <span className="listing-status">
-            {listing.status}
-          </span>
-
-        </div>
-
-        <div className="listing-basic-details-container">
-          <h3 className='listing-price'>${listing.price.toLocaleString()}</h3>
-          <span className="listing-location">
-            {listing.address}, {listing.city}, {listing.state}
-          </span>
-          <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
-        </div>
-
-     </div>
-      )
+      if(i <= 1) {
+        
+        return (
+      
+          <div key={i} className="listing-card" style={{width: `50%`}}>
+  
+            <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+  
+            <span className="listing-status">
+              {listing.status}
+            </span>
+  
+            </div>
+  
+            <div className="listing-basic-details-container">
+              <h3 className='listing-price'>${listing.price.toLocaleString()}</h3>
+              <span className="listing-location">
+                {listing.address}, {listing.city}, {listing.state}
+              </span>
+              <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
+            </div>
+  
+          </div>
+        )
+      } else {
+        return (
+      
+          <div key={i} className="listing-card">
+  
+            <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+  
+            <span className="listing-status">
+              {listing.status}
+            </span>
+  
+            </div>
+  
+            <div className="listing-basic-details-container">
+              <h3 className='listing-price'>${listing.price.toLocaleString()}</h3>
+              <span className="listing-location">
+                {listing.address}, {listing.city}, {listing.state}
+              </span>
+              <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
+            </div>
+  
+          </div>
+        )
+      }
     })
   }
 
