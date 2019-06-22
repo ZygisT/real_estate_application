@@ -6,7 +6,7 @@ const listingsData = [
     homeType: "Single-Family House",
     rooms: 4,
     price: 220000,
-    floorSpace: 2000,
+    floorSpace: 185,
     image: "./house-images/house-1.jpg",
     status: 'Sale'
   },
@@ -17,7 +17,7 @@ const listingsData = [
     homeType: "Appartment",
     rooms: 3,
     price: 1800,
-    floorSpace: 2000,
+    floorSpace: 191,
     image: "./house-images/house-2.jpg",
     status: 'Rent'
   },
@@ -28,7 +28,7 @@ const listingsData = [
     homeType: "Ranch",
     rooms: 2,
     price: 175600,
-    floorSpace: 1200,
+    floorSpace: 122,
     image:
       "./house-images/house-3.jpg",
     status: 'Sale'
@@ -40,7 +40,7 @@ const listingsData = [
     homeType: "Condo",
     rooms: 4,
     price: 140500,
-    floorSpace: 2305,
+    floorSpace: 205,
     image:
       "./house-images/house-4.jpg",
     status: 'Sale'
@@ -53,7 +53,7 @@ const listingsData = [
     homeType: "Appartment",
     rooms: 2,
     price: 2850,
-    floorSpace: 1887,
+    floorSpace: 188,
     image:
       "./house-images/house-5.jpg",
     status: 'Rent'
@@ -66,7 +66,7 @@ const listingsData = [
     homeType: "Condo",
     rooms: 5,
     price: 316000,
-    floorSpace: 3500,
+    floorSpace: 245,
     image:
       "./house-images/house-6.jpg",
     status: 'Sale'
@@ -78,7 +78,7 @@ const listingsData = [
     homeType: "Studio",
     rooms: 1,
     price: 1590,
-    floorSpace: 1100,
+    floorSpace: 120,
     image:
       "./house-images/house-7.jpg",
     status: 'Rent'
@@ -91,7 +91,7 @@ const listingsData = [
     homeType: "Single-Family House",
     rooms: 5,
     price: 189000,
-    floorSpace: 3000,
+    floorSpace: 231,
     image:
       "./house-images/house-8.jpg",
     status: 'Sale'
@@ -104,7 +104,7 @@ const listingsData = [
     homeType: "Studio",
     rooms: 3,
     price: 150000,
-    floorSpace: 1950,
+    floorSpace: 185,
     image:
       "./house-images/house-9.jpg",
     status: 'Sale'
@@ -117,7 +117,7 @@ const listingsData = [
     homeType: "Studio",
     rooms: 4,
     price: 109000,
-    floorSpace: 2090,
+    floorSpace: 192,
     image:
       "./house-images/house-10.jpg",
     status: 'Sale'
@@ -130,7 +130,7 @@ const listingsData = [
     homeType: "Studio",
     rooms: 2,
     price: 1500,
-    floorSpace: 2000,
+    floorSpace: 140,
     image:
       "./house-images/house-11.jpg",
     status: 'Rent'
@@ -143,7 +143,7 @@ const listingsData = [
     homeType: "Appartment",
     rooms: 1,
     price: 2200,
-    floorSpace: 1100,
+    floorSpace: 119,
     image:
       "./house-images/house-12.jpg",
     status: 'Rent'
