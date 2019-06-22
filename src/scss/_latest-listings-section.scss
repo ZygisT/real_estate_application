@@ -8,6 +8,7 @@
       width: 33.33%;
       height: auto;
       z-index: 99;
+      overflow: hidden;
 
       .listing-img {
         width: 100%;
@@ -16,8 +17,8 @@
 
         .listing-status {
           position: absolute;
-          top: 30px;
-          left: 30px;
+          top: 25px;
+          left: 25px;
           background: $primary-theme-color;
           color: $primary-font-color;
           text-transform: uppercase;
@@ -26,6 +27,49 @@
           line-height: 1.2;
           letter-spacing: .5px;
         }
+
+        .features-side-panel {
+          position: absolute;
+          z-index: 99;
+          top: 0;
+          right: -110px;
+          width: 110px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: $primary-transition;
+          background: linear-gradient(to right, #0b19239d 50%, #0a1923 100%);
+
+
+
+          .feature, .feature-2, .feature-3 {
+            // position: absolute;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 90px;
+            height: 90px;
+            font-size: 16px;
+            border-radius: 20%;
+            color: $primary-font-color;
+            border: 2px solid $primary-theme-color;
+            // background: $primary-theme-color;
+            transform: scale(0.8);
+            .bed-icon {
+              margin-right: 5px;
+            }
+          }
+        }
+
+      }
+
+      .listing-img:hover .features-side-panel {
+        right: 0px;
+        opacity: 1;
       }
 
       .listing-img::after {
@@ -35,12 +79,14 @@
         bottom: 0;
         right: 0;
         left: 0;
-        background: linear-gradient(to bottom, rgba(11, 25, 35, 0) 0%, #0a1923 100%);
+        background: linear-gradient(to bottom, #0b192300 40%, #0a1923 100%);
+        z-index: 98;
+      
       }
 
       .listing-basic-details-container {
         height: auto;
-        padding: 20px 30px;
+        padding: 25px;
         background: #0a1923;
         display: flex;
         flex-direction: column;
@@ -54,6 +100,11 @@
         .listing-location {
           font-size: 18px;
           color: $primary-font-color;
+
+          .address-marker {
+            margin-right: 10px;
+            color: $primary-theme-color;
+          }
         }
 
         .primary-btn {

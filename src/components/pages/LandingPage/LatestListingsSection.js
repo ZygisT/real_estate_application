@@ -30,13 +30,27 @@ export default class LatestOffers extends Component {
             <span className="listing-status">
               {listing.status}
             </span>
+
+            <div className="features-side-panel">
+              <span className="feature">
+                <i className="fas fa-bed bed-icon"></i> {listing.rooms}
+              </span>
+
+              <span className="feature-2">
+                <i className="far fa-square bed-icon"></i> {listing.floorSpace}m&sup2;
+              </span>
+
+              <span className="feature-3">
+                <i className="fas fa-bath bed-icon"></i> {listing.rooms}
+              </span>
+            </div>
   
             </div>
   
             <div className="listing-basic-details-container">
               <h3 className='listing-price'>${listing.price.toLocaleString()}</h3>
               <span className="listing-location">
-                {listing.address}, {listing.city}, {listing.state}
+                <i className="fas fa-map-marker-alt address-marker"></i>{listing.address}, {listing.city}, {listing.state}
               </span>
               <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
             </div>
@@ -53,13 +67,17 @@ export default class LatestOffers extends Component {
             <span className="listing-status">
               {listing.status}
             </span>
+
+            <span className="feature">
+              <i className="fas fa-bed bed-icon"></i> {listing.rooms}
+            </span>
   
             </div>
   
             <div className="listing-basic-details-container">
               <h3 className='listing-price'>${listing.price.toLocaleString()}</h3>
               <span className="listing-location">
-                {listing.address}, {listing.city}, {listing.state}
+              <i className="fas fa-map-marker-alt address-marker"></i>{listing.address}, {listing.city}, {listing.state}
               </span>
               <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
             </div>
