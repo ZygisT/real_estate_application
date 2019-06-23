@@ -89,6 +89,9 @@
           font-size: 28px;
           font-weight: 600;
           color: $primary-theme-color;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+
         }
 
         .listing-location {

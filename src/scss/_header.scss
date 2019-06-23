@@ -60,6 +60,7 @@ header {
 
 
         .branding-icon {
+          backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
           font-size: 27px;
           margin-right: 5px;
