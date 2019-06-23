@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LandingSection from './LandingPage/LandingSection'
 import LatestListingsSection from './LandingPage/LatestListingsSection'
+import AboutSection from './LandingPage/AboutSection'
 import listingsData from '../../data/listingsData'
 
 
@@ -17,6 +18,7 @@ export default class LandingPage extends Component {
       <div>
         <LandingSection />
         <LatestListingsSection listingsData={this.state.data} />
+        <AboutSection />
       </div>
     )
   }
