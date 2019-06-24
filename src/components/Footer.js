@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { NavLink } from "react-router-dom";
+
 
 export default class Footer extends Component {
   render() {
@@ -24,7 +26,7 @@ export default class Footer extends Component {
 
                   <a href="#footer">23-34 Grand Avenue, Ridgewood, NY</a>
 
-                  <span className="post-date">July 7,2019</span>
+                  <span className="post-date">July 7, 2019</span>
 
                 </div>
 
@@ -32,7 +34,7 @@ export default class Footer extends Component {
 
                   <a href="#footer">10 Cherry Hill, Camden, NJ</a>
 
-                  <span className="post-date">July 8,2019</span>
+                  <span className="post-date">July 8, 2019</span>
 
                 </div>
 
@@ -40,9 +42,38 @@ export default class Footer extends Component {
 
               <div className="tags items-container">
                 <h5>Tags</h5>
-                <a href="#footer">Apartments</a>
-                <a href="#footer">Cottage</a>
-                <a href="#footer">Office</a>
+                  <div className="tags-container">
+
+                    <a href="#footer">Apartments</a>
+                    <a href="#footer">Cottage</a>
+                    <a href="#footer">Office</a>
+                    <a href="#footer">Single-Family</a>
+                  </div>
+              </div>
+
+            </div>
+
+            <div className="bottom-wrapper">
+
+              <div className="branding">
+                <i className="fas fa-home branding-icon"></i>
+                <h1>Better<span>Home</span></h1>
+              </div>
+
+              <div className="nav-links">
+
+              <nav>
+                  <NavLink exact={true} activeClassName='is-active' className='nav-link' to="/">Home</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Listings">Listings</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/About">About</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Blog">Blog</NavLink>
+
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Contact">Contact</NavLink>
+                </nav>
+
               </div>
 
             </div>

@@ -4,9 +4,9 @@ footer {
 
   .footer-items-container {
     padding: 120px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
 
     .items-wrapper {
       display: flex;
@@ -31,7 +31,128 @@ footer {
           font-size: 16px;
           font-weight: 400;
           line-height: 1.5;
+        }
+      }
 
+      .recent-posts {
+
+        .post-container {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 16px;
+          a {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.3;
+            text-decoration: none;
+            color: $primary-theme-color;
+            transition: $primary-transition;
+          }
+          a:hover {
+            color: $primary-font-color;
+          }
+
+          .post-date {
+            font-size: .75em;
+            margin-top: .63em;
+          }
+        }
+
+        .post-container:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      .tags {
+
+
+        .tags-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          a {
+            color: $secondary-font-color;
+            padding: 12px 20px;
+            border: 1px solid #222f38;
+            text-decoration: none;
+            margin: 0px 10px 5px 0px;
+            transition: $primary-transition;
+          }
+  
+          a:hover {
+            color: $primary-font-color;
+          }
+        }
+      }
+    }
+
+    .bottom-wrapper {
+      padding: 50px 25px 0px;
+      // display: flex;
+      // flex-direction: row;
+      align-items: center;
+
+      .branding {
+        display: flex;
+        align-items: center;
+        color: $primary-font-color;
+
+
+        .branding-icon {
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+          font-size: 27px;
+          margin-right: 5px;
+          color: $primary-theme-color;
+        }
+
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          
+          span {
+            font-weight: 300;
+          }
+        }
+      }
+
+      nav {
+        // margin-left: 20px;
+        a {
+          font-size: 14px;
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
+          margin-right: 15px;
+          font-weight: 400;
+          color: $secondary-font-color;
+          transition: $primary-transition;
+        }
+
+        a:hover {
+          color: $primary-font-color;           
+        }
+
+        a::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          top: 22px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: $primary-theme-color;
+          transition: $primary-transition; 
+          transform: scale(0, 1);
+        }
+  
+        .is-active::after {
+          transform: scale(1, 1);  
+        }
+  
+        a:hover::after {
+          transform: scale(1, 1);  
         }
       }
     }
