@@ -10,7 +10,7 @@ export default class NewsletterSection extends Component {
           <div className="newsletter-section-items-container">
 
             <div className="subscribe-message">
-            <h4>Sign Up for greatest deals on real estate!</h4>
+            <h4>Newsletter. Sign Up for greatest deals on real estate!</h4>
             </div>
 
             <div className="subscribe-form">
