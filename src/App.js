@@ -1,6 +1,7 @@
 import React from 'react';
 import './scss/main.scss';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import LandingPage from './components/pages/LandingPage';
 import ListingsPage from './components/pages/ListingsPage';
 import ContactPage from './components/pages/ContactPage';
@@ -21,6 +22,8 @@ function App() {
         <Route path="/About/" component={AboutPage} />
         <Route path="/Blog/" component={BlogPage} />
         <Route path="/Contact/" component={ContactPage} />
+
+        <Footer />
       </Router>
     </div>
   );

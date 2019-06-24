@@ -1,0 +1,39 @@
+footer {
+  background: #0A1923;
+  color: $secondary-font-color;
+
+  .footer-items-container {
+    padding: 120px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .items-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      h5 {
+        color: $primary-font-color;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 35px;
+      }
+  
+      .items-container {
+        width: 33.33%;
+        padding: 0px 25px;
+
+      }
+
+      .about {
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
+
+        }
+      }
+    }
+  }
+}

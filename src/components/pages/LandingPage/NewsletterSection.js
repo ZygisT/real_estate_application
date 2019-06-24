@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 export default class NewsletterSection extends Component {
   render() {
     return (
+      // Newsletter Section Start
       <section id="newsletter-section">
         
         <div className="center-content">
@@ -23,6 +24,8 @@ export default class NewsletterSection extends Component {
         </div>
 
       </section>
+      // Newsletter Section End
+
     )
   }
 }
