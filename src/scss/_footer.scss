@@ -4,9 +4,6 @@ footer {
 
   .footer-items-container {
     padding: 120px 0px;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
 
     .items-wrapper {
       display: flex;
@@ -73,7 +70,7 @@ footer {
           a {
             color: $secondary-font-color;
             padding: 12px 20px;
-            border: 1px solid #222f38;
+            border: 1px solid $border-color;
             text-decoration: none;
             margin: 0px 10px 10px 0px;
             transition: $primary-transition;
