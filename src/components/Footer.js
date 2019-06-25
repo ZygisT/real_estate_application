@@ -12,6 +12,7 @@ export default class Footer extends Component {
 
           <div className="footer-items-container">
 
+            {/* Top Wrapper Start */}
             <div className="items-wrapper">
 
               <div className="about items-container">
@@ -47,12 +48,14 @@ export default class Footer extends Component {
                     <a href="#footer">Apartments</a>
                     <a href="#footer">Cottage</a>
                     <a href="#footer">Office</a>
-                    <a href="#footer">Single-Family</a>
+                    <a href="#footer">Condo</a>
                   </div>
               </div>
 
             </div>
+            {/* Top Wrapper End */}
 
+            {/* Bottom Wrapper Start */}
             <div className="bottom-wrapper">
 
               <div className="branding">
@@ -77,6 +80,7 @@ export default class Footer extends Component {
               </div>
 
             </div>
+            {/* Bottom Wrapper End */}
             
           </div>
 

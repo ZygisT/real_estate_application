@@ -75,7 +75,7 @@ footer {
             padding: 12px 20px;
             border: 1px solid #222f38;
             text-decoration: none;
-            margin: 0px 10px 5px 0px;
+            margin: 0px 10px 10px 0px;
             transition: $primary-transition;
           }
   
@@ -88,9 +88,6 @@ footer {
 
     .bottom-wrapper {
       padding: 50px 25px 0px;
-      // display: flex;
-      // flex-direction: row;
-      align-items: center;
 
       .branding {
         display: flex;
@@ -117,7 +114,6 @@ footer {
       }
 
       nav {
-        // margin-left: 20px;
         a {
           font-size: 14px;
           position: relative;
