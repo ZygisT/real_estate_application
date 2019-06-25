@@ -1,13 +1,15 @@
 header {
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 99;
   width: 100%;
+  background: $secondary-theme-color;
 
   
 
   .top-panel {
-    background: #162a39c5;
+    // background: #162a39c5;
+    background: $secondary-theme-color;
+    border: 1px solid $border-color;
 
     .top-panel-items-container {
       padding: 12px 25px;

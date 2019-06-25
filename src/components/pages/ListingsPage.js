@@ -12,10 +12,24 @@ export default class ListingsPage extends Component {
             <div className="search-form">
 
               <h3>Search for properties:</h3>
-              <label htmlFor="">Property status</label>
-              <select name="properyStatus" id="propertyStatus">
-                <option value="any">Any</option>
-              </select>
+
+              <div className="fields-wrapper">
+                <label htmlFor="">Property status</label>
+                <select name="properyStatus" id="propertyStatus">
+                  <option value="any">Any</option>
+                </select>
+
+                <label htmlFor="">Property type</label>
+                <select name="properyType" id="propertyType">
+                  <option value="any">Any</option>
+                </select>
+
+                <label htmlFor="">Location</label>
+                <select name="properyLocation" id="propertyLocation">
+                  <option value="any">Any</option>
+                </select>
+
+              </div>
 
             </div>
 
