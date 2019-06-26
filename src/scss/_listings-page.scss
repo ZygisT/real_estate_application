@@ -1,16 +1,20 @@
 #listings-section {
   width: 100%;
-  padding: 50px 0px;
+  // padding: 50px 0px;
   .content-wrapper {
     width: 100%;
-    padding: 0px 25px;
+    // padding: 0px 25px;
     display: flex;
     .filter-area {
       width: 30%;
+      padding: 55px 25px;
     }
 
     .listings-area {
       width: 70%;
+      padding: 55px 25px;
+
+      
     }
   }
 }

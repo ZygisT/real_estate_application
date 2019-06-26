@@ -1,0 +1,51 @@
+#sort-by-area {
+
+  .results-container {
+
+    .search-results {
+      font-size: 14px;
+      color: $secondary-font-color;
+      margin-bottom: 10px;
+    }
+  }
+
+  .sort-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .sort-options {
+
+      .sort-by-text {
+        font-weight: 600;
+        margin-right: 20px;
+      }
+
+      .sort-by-price-select {
+        border: none;
+        background: #f3f3f4;
+        color: $secondary-font-color;
+        padding: 12px 20px;
+        width: 250px;
+      }
+
+      .sort-by-price-select:focus {
+        outline: none;
+      }
+    }
+
+    .view-mode {
+
+      .view-mode-icon {
+        font-size: 20px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+
+      .is-active {
+        color: $primary-theme-color;
+      }
+    }
+  }
+}
