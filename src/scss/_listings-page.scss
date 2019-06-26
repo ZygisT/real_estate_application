@@ -1,15 +1,15 @@
 #listings-section {
+  width: 100%;
   padding: 50px 0px;
-
   .content-wrapper {
+    width: 100%;
+    padding: 0px 25px;
     display: flex;
     .filter-area {
-      border: 2px solid blue;
       width: 30%;
     }
 
     .listings-area {
-      border: 2px solid red;
       width: 70%;
     }
   }
