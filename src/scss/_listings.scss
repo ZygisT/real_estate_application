@@ -54,10 +54,11 @@
 #listings-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   .listing-card {
-    width: 50%;
-    margin: 0px 25px;
+    width: 40%;
+    margin: 0px 25px 50px;
 
     .listing-img {
       width: 100%;

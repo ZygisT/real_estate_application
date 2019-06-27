@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
 import Filter from './ListingsPage/Filter'
 import Listings from './ListingsPage/Listings'
+import listingsData from '../../data/listingsData'
 
 export default class ListingsPage extends Component {
+  constructor() {
+    super();
+    this.state = {
+      listingsData,
+
+    };
+  }
+
   render() {
     return (
       // Listings Section Start
@@ -13,11 +22,11 @@ export default class ListingsPage extends Component {
           <div className="content-wrapper">
 
             <div className="listings-area">
-              <Listings />
+              <Listings listingsData={this.state.listingsData}/>
             </div>
 
             <div className="filter-area">
-              <Filter />
+              {/* <Filter /> */}
             </div>
 
           </div>
