@@ -5,6 +5,9 @@ export default class Listings extends Component {
     super();
     this.state = {};
   }
+
+  
+
   render() {
     return (
       <section className="listings-wrapper">
@@ -41,17 +44,17 @@ export default class Listings extends Component {
   
         </section>
 
-        <section className="listings-container">
+        <section id="listings-container">
 
           <div className="listing-card">
 
             <div className="listing-img">
-              <span className="listing-status">Status</span>
+              <span className="listing-status">Sale</span>
             </div>
 
-            <div className="listing-features">
+            <div className="listing-features-container">
 
-              <span className="feature-2">
+              <span className="feature">
                 <i className="far fa-square feature-icon"></i>210 m&sup2;
               </span>
 
@@ -59,21 +62,21 @@ export default class Listings extends Component {
                 <i className="fas fa-bed feature-icon"></i>3
               </span>
 
-              <span className="feature-3">
+              <span className="feature">
                 <i className="fas fa-bath feature-icon"></i>4
               </span>
 
             </div>
 
-            <div className="price-and-description">
-              <div className="listing-price">Price</div>
+            <div className="price-and-description-container">
+              <div className="listing-price">$180,000</div>
               
               <div className="listing-description">
-                <p>Description</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vitae dolor labore placeat libero dolorum rerum eaque praesentium expedita in.</p>
               </div>
             </div>
 
-            <div className="location-and-btn">
+            <div className="location-and-btn-container">
               <span className="listing-location">
                 <i className="fas fa-map-marker-alt address-marker"></i>Address
               </span>
@@ -82,6 +85,7 @@ export default class Listings extends Component {
             </div>
           
           </div>
+          
 
         </section>
 
