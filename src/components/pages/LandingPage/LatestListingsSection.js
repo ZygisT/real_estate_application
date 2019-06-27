@@ -33,7 +33,7 @@ export default class LatestOffers extends Component {
 
             <div className="features-side-panel">
               <span className="feature">
-                <i className="fas fa-bed feature-icon"></i> {listing.rooms}
+                <i className="fas fa-bed feature-icon"></i> {listing.bedrooms}
               </span>
 
               <span className="feature-2">
@@ -41,7 +41,7 @@ export default class LatestOffers extends Component {
               </span>
 
               <span className="feature-3">
-                <i className="fas fa-bath feature-icon"></i> {listing.rooms}
+                <i className="fas fa-bath feature-icon"></i> {listing.bathrooms}
               </span>
             </div>
   
@@ -70,7 +70,7 @@ export default class LatestOffers extends Component {
 
             <div className="features-side-panel">
               <span className="feature">
-                <i className="fas fa-bed feature-icon"></i> {listing.rooms}
+                <i className="fas fa-bed feature-icon"></i> {listing.bedrooms}
               </span>
 
               <span className="feature-2">
@@ -78,7 +78,7 @@ export default class LatestOffers extends Component {
               </span>
 
               <span className="feature-3">
-                <i className="fas fa-bath feature-icon"></i> {listing.rooms}
+                <i className="fas fa-bath feature-icon"></i> {listing.bathrooms}
               </span>
             </div>
   

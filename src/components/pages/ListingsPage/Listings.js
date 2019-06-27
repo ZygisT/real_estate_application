@@ -41,11 +41,49 @@ export default class Listings extends Component {
   
         </section>
 
-        <div className="listings-container">
+        <section className="listings-container">
 
+          <div className="listing-card">
+
+            <div className="listing-img">
+              <span className="listing-status">Status</span>
+            </div>
+
+            <div className="listing-features">
+
+              <span className="feature-2">
+                <i className="far fa-square feature-icon"></i>210 m&sup2;
+              </span>
+
+              <span className="feature">
+                <i className="fas fa-bed feature-icon"></i>3
+              </span>
+
+              <span className="feature-3">
+                <i className="fas fa-bath feature-icon"></i>4
+              </span>
+
+            </div>
+
+            <div className="price-and-description">
+              <div className="listing-price">Price</div>
+              
+              <div className="listing-description">
+                <p>Description</p>
+              </div>
+            </div>
+
+            <div className="location-and-btn">
+              <span className="listing-location">
+                <i className="fas fa-map-marker-alt address-marker"></i>Address
+              </span>
+
+              <a className='primary-btn' href="#sort-by-area">Read More</a>
+            </div>
           
+          </div>
 
-        </div>
+        </section>
 
       </section>
 
