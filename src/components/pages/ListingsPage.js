@@ -8,8 +8,15 @@ export default class ListingsPage extends Component {
     super();
     this.state = {
       listingsData,
+      viewMode: 'box'
 
     };
+  }
+
+  changeView = (viewName) => {
+    this.setState({
+      viewMode: viewName
+    })
   }
 
   render() {
@@ -22,7 +29,7 @@ export default class ListingsPage extends Component {
           <div className="content-wrapper">
 
             <div className="listings-area">
-              <Listings listingsData={this.state.listingsData}/>
+              <Listings listingsData={this.state.listingsData} globalState={this.state} changeView={this.changeView}/>
             </div>
 
             <div className="filter-area">
