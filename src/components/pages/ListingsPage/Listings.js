@@ -116,15 +116,16 @@ export default class Listings extends Component {
       <section className="listings-wrapper">
         <section id="sort-by-area">
           <div className="results-container">
-            <div className="search-results">12 results found</div>
+            <div className="search-results">{this.props.globalState.filteredData.length} results found</div>
           </div>
 
           <div className="sort-container">
             <div className="sort-options">
               <span className="sort-by-text">Sort by:</span>
               <select
+                onChange={this.props.change}
                 className="sort-by-price-select"
-                name="sort-by-price"
+                name="sortby"
                 id="sort-by-price"
               >
                 <option value="all">All</option>
@@ -134,8 +135,8 @@ export default class Listings extends Component {
             </div>
 
             <div className="view-mode">
-              <i className={`fas fa-th view-mode-icon ${this.props.globalState.viewMode === 'box' ? '.is-active' : ''}`} onClick={this.props.changeView.bind(null, "box")}/>
-              <i className="fas fa-th-list view-mode-icon" onClick={this.props.changeView.bind(null, "long")}/>
+              <i className={`fas fa-th view-mode-icon ${this.props.globalState.viewMode === 'box' ? 'is-active' : ''}`} onClick={this.props.changeView.bind(null, "box")}/>
+              <i className={`fas fa-th-list view-mode-icon ${this.props.globalState.viewMode === 'long' ? 'is-active' : ''}`} onClick={this.props.changeView.bind(null, "long")}/>
             </div>
           </div>
         </section>
