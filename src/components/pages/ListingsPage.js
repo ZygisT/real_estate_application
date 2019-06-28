@@ -41,11 +41,13 @@ export default class ListingsPage extends Component {
 
   change(event) {
     var name = event.target.name;
-    var value = event.target.value;
+    // var value = parseFloat(event.target.value.replace(/[^\d\-eE+]/g, ""));
+    var value = event.target.value
+    console.log(value)
+    console.log(typeof(value))
     this.setState({
       [name]:value
     }, () => {
-      console.log(this.state)
       this.filteredData()
     })
   }
@@ -58,7 +60,7 @@ export default class ListingsPage extends Component {
 
   filteredData() {
     var newData = this.state.listingsData.filter((item) => {
-      return item.price >= this.state.min_price && item.price <= this.state.max_price 
+      return item.price >= this.state.min_price && item.price <= this.state.max_price
       && item.bedrooms >= this.state.bedrooms && item.bathrooms >= this.state.bathrooms
     })
 
@@ -71,6 +73,12 @@ export default class ListingsPage extends Component {
     if(this.state.propertyTypes !== "All") {
       newData = newData.filter((item) => {
         return item.homeType === this.state.propertyTypes
+      })
+    }
+
+    if(this.state.propertyStatus !== "All") {
+      newData = newData.filter((item) => {
+        return item.status === this.state.propertyStatus
       })
     }
 
@@ -89,6 +97,7 @@ export default class ListingsPage extends Component {
 
     this.setState({
       filteredData: newData
+      
     })
   }
 
@@ -110,6 +119,16 @@ export default class ListingsPage extends Component {
     propertyTypes = [...propertyTypes]
 
     propertyTypes.sort()
+
+    // Property Status
+    let propertyStatus = this.state.listingsData.map((item) => {
+      return item.status
+    })
+
+    propertyStatus = new Set(propertyStatus)
+    propertyStatus = [...propertyStatus]
+
+    propertyStatus.sort()
 
     // Bedrooms
     let bedrooms = this.state.listingsData.map((item) => {
@@ -135,11 +154,12 @@ export default class ListingsPage extends Component {
       populateFormsData: {
         propertyCity,
         propertyTypes,
+        propertyStatus,
         bedrooms,
         bathrooms
       }
     }, () => {
-      // console.log(this.state)
+      console.log(this.state.populateFormsData)
     })
   }
 
