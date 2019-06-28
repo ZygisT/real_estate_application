@@ -4,9 +4,10 @@ export default class Listings extends Component {
   constructor() {
     super();
     this.state = {};
+    this.loopListings = this.loopListings.bind(this)
   }
 
-  loopListings = () => {
+  loopListings() {
     const { listingsData } = this.props;
 
     return listingsData.map((listing, i) => {
@@ -126,7 +127,6 @@ export default class Listings extends Component {
                 onChange={this.props.change}
                 className="sort-by-price-select"
                 name="sortby"
-                id="sort-by-price"
               >
                 <option value="all">All</option>
                 <option value="price-dsc">Price (Low to High)</option>

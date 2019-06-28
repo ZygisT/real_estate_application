@@ -42,6 +42,20 @@
       }
 
       .bottom-block {
+
+        select {
+          width: 100%;
+          height: 45px;
+          padding: 12px 20px;
+          color: $secondary-font-color;
+          margin-bottom: 10px;
+          border: none;
+        }
+
+        select:focus {
+          outline: none;
+        }
+        
         .input-container {
           display: flex;
           flex-direction: row;
