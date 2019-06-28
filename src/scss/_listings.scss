@@ -66,8 +66,8 @@
         width: 100%;
         height: 250px;
         position: relative;
-        background: url("../images/about-section-img.jpg") no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: center;
 
         .listing-status {
@@ -166,8 +166,8 @@
         width: 100%;
         height: 250px;
         position: relative;
-        background: url("../images/about-section-img.jpg") no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: center;
 
         .listing-status {

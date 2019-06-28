@@ -18,7 +18,8 @@ export default class Listings extends Component {
           <div key={i} className="listing-card-box">
   
             <div className="card-top">
-              <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+              <div className="listing-img" style={{
+                backgroundImage: `url(${listing.image})`}}>
                 <span className="listing-status">{listing.status}</span>
               </div>
             </div>
@@ -66,7 +67,7 @@ export default class Listings extends Component {
           <div key={i} className="listing-card-long">
   
             <div className="card-top">
-              <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+              <div className="listing-img" style={{backgroundImage: `url(${listing.image})`}}>
                 <span className="listing-status">{listing.status}</span>
               </div>
             </div>

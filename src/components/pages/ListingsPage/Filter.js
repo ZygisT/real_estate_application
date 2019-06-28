@@ -6,16 +6,20 @@ export default class Filter extends Component {
     this.state = {
      
     }
+    this.cities = this.cities.bind(this)
+    this.homeTypes = this.homeTypes.bind(this)
+    this.bedrooms = this.bedrooms.bind(this)
+    this.bathrooms = this.bathrooms.bind(this)
   }
 
   componentWillMount(){
     this.props.populateAction()
   }
 
-  cities = () => {
-    if(this.props.globalState.populateFormsData.cities !== undefined) {
-      var { cities } = this.props.globalState.populateFormsData
-      return cities.map((item) => {
+  cities() {
+    if(this.props.globalState.populateFormsData.propertyCity !== undefined) {
+      var { propertyCity } = this.props.globalState.populateFormsData
+      return propertyCity.map((item) => {
         return (
           <option key={item} value={item}>{item}</option>
         )
@@ -23,10 +27,10 @@ export default class Filter extends Component {
     }
   }
 
-  homeTypes = () => {
-    if(this.props.globalState.populateFormsData.homeTypes !== undefined) {
-      var { homeTypes } = this.props.globalState.populateFormsData
-      return homeTypes.map((item) => {
+  homeTypes() {
+    if(this.props.globalState.populateFormsData.propertyTypes !== undefined) {
+      var { propertyTypes } = this.props.globalState.populateFormsData
+      return propertyTypes.map((item) => {
         return (
           <option key={item} value={item}>{item}</option>
         )
@@ -34,7 +38,7 @@ export default class Filter extends Component {
     }
   }
 
-  bedrooms = () => {
+  bedrooms() {
     if(this.props.globalState.populateFormsData.bedrooms !== undefined) {
       var { bedrooms } = this.props.globalState.populateFormsData
       return bedrooms.map((item) => {
@@ -45,7 +49,7 @@ export default class Filter extends Component {
     }
   }
 
-  bathrooms = () => {
+  bathrooms() {
     if(this.props.globalState.populateFormsData.bathrooms !== undefined) {
       var { bathrooms } = this.props.globalState.populateFormsData
       return bathrooms.map((item) => {
@@ -68,17 +72,17 @@ export default class Filter extends Component {
             <div className="top-block">
               <label htmlFor="properyStatus">Property status</label>
               <select name="properyStatus" onChange={this.props.change}>
-                <option value="All">Any</option>
+                <option value="All">All</option>
               </select>
 
-              <label htmlFor="propertyType">Property type</label>
-              <select name="properyType" onChange={this.props.change}>
+              <label htmlFor="propertyTypes">Property type</label>
+              <select name="propertyTypes" onChange={this.props.change}>
                 <option value="All">All</option>
                 {this.homeTypes()}
               </select>
 
               <label htmlFor="propertyLocation">Location</label>
-              <select name="properyLocation" onChange={this.props.change}>
+              <select name="propertyCity" onChange={this.props.change}>
                 <option value="All">All</option>
                 {this.cities()}
               </select>

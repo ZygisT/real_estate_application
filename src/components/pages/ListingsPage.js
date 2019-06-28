@@ -9,16 +9,16 @@ export default class ListingsPage extends Component {
     this.state = {
       listingsData,
       viewMode: 'box',
-      city: "All",
-      homeType: "All",
+      propertyCity: "All",
+      propertyTypes: "All",
+      propertyStatus: 'All',
       bedrooms: 0,
       bathrooms: 0,
       min_price: 0,
       max_price: 1000000,
       filteredData: listingsData,
       populateFormsData: '',
-      sortby: 'price-dsc',
-      houseStatus: 'All'
+      sortby: 'price-asc'
 
     };
     this.change = this.change.bind(this)
@@ -62,29 +62,17 @@ export default class ListingsPage extends Component {
       && item.bedrooms >= this.state.bedrooms && item.bathrooms >= this.state.bathrooms
     })
 
-    if(this.state.city !== "All") {
+    if(this.state.propertyCity !== "All") {
       newData = newData.filter((item) => {
-        return item.city === this.state.city
+        return item.city === this.state.propertyCity
       })
     }
 
-    if(this.state.homeType !== "All") {
+    if(this.state.propertyTypes !== "All") {
       newData = newData.filter((item) => {
-        return item.homeType === this.state.homeType
+        return item.homeType === this.state.propertyTypes
       })
     }
-
-    if(this.state.houseStatus !== "All") {
-      newData = newData.filter((item) => {
-        return item.status === this.state.houseStatus
-      })
-    }
-
-    // if(this.state.houseStatus === "Rent") {
-    //   newData = newData.filter((item) => {
-    //     return item.status === this.state.houseStatus
-    //   })
-    // }
 
     if(this.state.sortby === 'price-dsc') {
       newData = newData.sort((a, b) => {
@@ -106,22 +94,22 @@ export default class ListingsPage extends Component {
 
   populateForms() {
     // city
-    let cities = this.state.listingsData.map((item) => {
+    let propertyCity = this.state.listingsData.map((item) => {
       return item.city
     })
-    cities = new Set(cities)
-    cities = [...cities]
+    propertyCity = new Set(propertyCity)
+    propertyCity = [...propertyCity]
 
-    cities.sort()
+    propertyCity.sort()
 
     // homeType
-    let homeTypes = this.state.listingsData.map((item) => {
+    let propertyTypes = this.state.listingsData.map((item) => {
       return item.homeType
     })
-    homeTypes = new Set(homeTypes)
-    homeTypes = [...homeTypes]
+    propertyTypes = new Set(propertyTypes)
+    propertyTypes = [...propertyTypes]
 
-    homeTypes.sort()
+    propertyTypes.sort()
 
     // Bedrooms
     let bedrooms = this.state.listingsData.map((item) => {
@@ -145,8 +133,8 @@ export default class ListingsPage extends Component {
 
     this.setState({
       populateFormsData: {
-        cities,
-        homeTypes,
+        propertyCity,
+        propertyTypes,
         bedrooms,
         bathrooms
       }
