@@ -121,7 +121,7 @@ const listingsData = [
     description: 'This house featuring hard wood floors thru-out, expansive family room, eat in kitchen and large fully fenced yard! Interior lay out is very spacious. Located on a dead end street makes this home truly peaceful. There is a wood burning fireplace in front living room and also a gas burning wall fireplace in family room.',
     bedrooms: 3,
     bathrooms: 3,
-    price: 150000,
+    price: 85000,
     floorSpace: 185,
     image:
       "./house-images/house-9.jpg",
@@ -149,8 +149,8 @@ const listingsData = [
     state: "FL",
     homeType: "Single-Family House",
     description: 'Very unique 2 bedroom home. Lots of space inside, 2 bedrooms and 2 baths on upper level. 1st floor master, full bath and laundry. Kitchen with eat in, formal dining and large living room.',
-    bedrooms: 2,
-    bathrooms: 2,
+    bedrooms: 1,
+    bathrooms: 1,
     price: 1500,
     floorSpace: 140,
     image:
@@ -164,7 +164,7 @@ const listingsData = [
     state: "NY",
     homeType: "Apartment",
     description: 'Beautiful apartment maintaining its charm, featuring authentic kitchen with walk-in pantry, gleaming hardwood floors throughout, original crown moldings, new bathroom, library or office with french doors, dining room with arched doorways, 1 bedroom and 1 bathroom.',
-    bedrooms: 2,
+    bedrooms: 1,
     bathrooms: 2,
     price: 2200,
     floorSpace: 119,

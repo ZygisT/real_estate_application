@@ -22,29 +22,26 @@ export default class ListingsPage extends Component {
 
     };
     this.change = this.change.bind(this)
+    this.changeInt = this.changeInt.bind(this)
     this.filteredData = this.filteredData.bind(this)
     this.populateForms = this.populateForms.bind(this)
     this.changeView = this.changeView.bind(this)
 
   }
 
-  componentWillMount() {
-    
-    let listingsData = this.state.listingsData.sort((a, b) => {
-      return a.price - b.price
-    })
-
+  change(event) {
+    var name = event.target.name;
+    var value = event.target.value
     this.setState({
-      listingsData
+      [name]:value
+    }, () => {
+      this.filteredData()
     })
   }
 
-  change(event) {
+  changeInt(event) {
     var name = event.target.name;
-    // var value = parseFloat(event.target.value.replace(/[^\d\-eE+]/g, ""));
-    var value = event.target.value
-    console.log(value)
-    console.log(typeof(value))
+    var value = parseFloat(event.target.value.replace(/[^\d\-eE+]/g, ""));
     this.setState({
       [name]:value
     }, () => {
@@ -158,9 +155,7 @@ export default class ListingsPage extends Component {
         bedrooms,
         bathrooms
       }
-    }, () => {
-      console.log(this.state.populateFormsData)
-    })
+    });
   }
 
 
@@ -178,7 +173,7 @@ export default class ListingsPage extends Component {
             </div>
 
             <div className="filter-area">
-              <Filter change={this.change} globalState={this.state} populateAction={this.populateForms}/>
+              <Filter change={this.change} changeInt={this.changeInt} globalState={this.state} populateAction={this.populateForms}/>
             </div>
 
           </div>

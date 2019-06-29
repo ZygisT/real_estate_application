@@ -29,7 +29,8 @@
       .top-block {
         select {
           width: 100%;
-          height: 45px;
+          height: 50px;
+          font-size: 0.875rem;
           padding: 12px 20px;
           color: $secondary-font-color;
           margin-bottom: 10px;
@@ -45,7 +46,8 @@
 
         select {
           width: 100%;
-          height: 45px;
+          height: 50px;
+          font-size: 0.875rem;
           padding: 12px 20px;
           color: $secondary-font-color;
           margin-bottom: 10px;
@@ -63,7 +65,8 @@
 
           input {
             width: calc(50% - 5px);
-            height: 45px;
+            height: 50px;
+            font-size: 0.875rem;
             padding: 12px 20px;
             color: $secondary-font-color;
             margin-bottom: 10px;

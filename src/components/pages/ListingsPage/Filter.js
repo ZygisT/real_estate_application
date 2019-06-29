@@ -84,7 +84,7 @@ export default class Filter extends Component {
           <div className="fields-wrapper">
             <div className="top-block">
               <label htmlFor="properyStatus">Property status</label>
-              <select name="properyStatus" onChange={this.props.change}>
+              <select name="propertyStatus" onChange={this.props.change}>
                 <option value="All">All</option>
                 {this.homeStatus()}
               </select>
@@ -105,22 +105,22 @@ export default class Filter extends Component {
             <div className="bottom-block">
               <label htmlFor="Price">Price</label>
               <div className="input-container">
-                <input type="text" name="min_price" onChange={this.props.change} value={this.props.globalState.min_price} />
-                {/* <NumberFormat thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="min_price" onChange={this.props.change} value={this.props.globalState.min_price} />
-                <NumberFormat thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="max_price" onChange={this.props.change} value={this.props.globalState.max_price} /> */}
+                {/* <input type="text" name="min_price" onChange={this.props.change} value={this.props.globalState.min_price} /> */}
+                <NumberFormat thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="min_price" onChange={this.props.changeInt} value={this.props.globalState.min_price} />
+                <NumberFormat thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="max_price" onChange={this.props.changeInt} value={this.props.globalState.max_price} />
 
-                <input type="text" name="max_price" onChange={this.props.change} value={this.props.globalState.max_price}/>
+                {/* <input type="text" name="max_price" onChange={this.props.change} value={this.props.globalState.max_price}/> */}
               </div>
 
               <label htmlFor="Bedrooms">Bedrooms</label>
-              <select name="bedrooms" onChange={this.props.change}>
+              <select name="bedrooms" onChange={this.props.changeInt}>
                 <option value="0">All</option>
                 {this.bedrooms()}
               </select>
 
 
               <label htmlFor="Bathrooms">Bathrooms</label>
-              <select name="bathrooms" onChange={this.props.change}>
+              <select name="bathrooms" onChange={this.props.changeInt}>
                 <option value="0">All</option>
                 {this.bathrooms()}
               </select>
