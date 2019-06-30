@@ -15,7 +15,7 @@
 
 // Image overlay
 @mixin image-overlay {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -23,4 +23,11 @@
   left: 0;
   background: rgba(22, 42, 57, 0.5);
   z-index: -1;
+}
+
+@mixin paragraph-styling {
+  font-size: 16px;
+  color: $secondary-font-color;
+  line-height: 1.5;
+  font-weight: 300;
 }

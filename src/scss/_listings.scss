@@ -117,10 +117,7 @@
         }
 
         .listing-description {
-          font-size: 16px;
-          color: $secondary-font-color;
-          line-height: 1.5;
-          font-weight: 300;
+          @include paragraph-styling;
         }
       }
 
