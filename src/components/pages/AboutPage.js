@@ -67,7 +67,7 @@ export default class AboutPage extends Component {
             </div>
           </section>
         
-          <section id="testimonials">
+          <section id="testimonials-section">
 
             <div className="testimonials-container">
 
