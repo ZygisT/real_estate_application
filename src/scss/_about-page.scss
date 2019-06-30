@@ -13,13 +13,47 @@
         font-size: 30px;
         margin-bottom: 25px;
         color: $primary-theme-color;
-
+        font-weight: 600;
       }
 
       p {
         @include paragraph-styling;
+        margin-bottom: 25px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
+}
 
+#counter-section {
+  padding: 40px 0px;
+  border-top: 1px solid $card-border-color;
+  border-bottom: 1px solid $card-border-color;
+
+  .counter-items-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .counter-box {
+      width: 250px;
+      text-align: center;
+
+      .counter {
+        font-size: 72px;
+        color: $primary-theme-color;
+
+      }
+
+      h3 {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+  }
 }
