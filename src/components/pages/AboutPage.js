@@ -66,6 +66,32 @@ export default class AboutPage extends Component {
 
             </div>
           </section>
+        
+          <section id="testimonials">
+
+            <div className="testimonials-container">
+
+              <h3>What Our Clients Say</h3>
+
+              <div className="testimonials-item-container">
+
+                <div className="testimonial-box">
+                  <div className="review-block">
+
+                    <p>I’ve spent tons of time searching for a not so expensive condo in Maryland. As soon as I hired one of your agents, I was finally able to find it and move in! Agents were outstanding and the house they've found was brilliant.</p>
+
+                  </div>
+
+                  <div className="bottom-block">
+                    <img src="" alt="Client"/>
+                    <h4>Jimmy Doe</h4>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
         </div>
       </section>
     );
