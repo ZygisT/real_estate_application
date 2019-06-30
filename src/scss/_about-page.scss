@@ -18,7 +18,10 @@
 
       p {
         @include paragraph-styling;
-        margin-bottom: 25px;
+        margin: 25px 0px;
+      }
+      p:last-child {
+        margin-bottom: 0px;
       }
 
       img {
@@ -59,15 +62,53 @@
 }
 
 #testimonials-section {
-  padding: 40px 0px;
+  padding: 80px 0px;
   .testimonials-container {
-    padding: 0px 25px;
-
     h3 {
       font-size: 30px;
-      margin-bottom: 25px;
+      margin-bottom: 40px;
       color: $primary-theme-color;
       font-weight: 600;
+      padding: 0px 25px;
+
+    }
+  }
+
+  .testimonials-box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .testimonial-box {
+      width: 25%;
+      padding: 0px 25px;
+
+      .top-block {
+        padding: 0px 0px 20px;
+        border-bottom: 1px solid $card-border-color;
+        p {
+          @include paragraph-styling;
+        }
+      }
+
+      .bottom-block {
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .client-img {
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+        }
+
+        .client-name {
+          font-size: 16px;
+          font-weight: 600;
+          margin-left: 20px;
+        }
+      }
     }
   }
 }
