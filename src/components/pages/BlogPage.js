@@ -4,7 +4,8 @@ export default class BlogPage extends Component {
   constructor() {
     super();
     this.state = {
-      items: [1, 2, 3, 4, 5, 6, 7]
+      items: [1, 2, 3],
+      search: ''
     };
   }
 
@@ -66,7 +67,7 @@ export default class BlogPage extends Component {
             <input
               className="search-bar"
               type="text"
-              placeholder="Enter keyword..."
+              placeholder="What are you looking for?"
             />
           </section>
 
