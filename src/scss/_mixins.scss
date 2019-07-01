@@ -31,3 +31,9 @@
   line-height: 1.5;
   font-weight: 300;
 }
+
+@mixin h3 {
+  font-size: 30px;
+  color: $primary-theme-color;
+  font-weight: 600;
+}

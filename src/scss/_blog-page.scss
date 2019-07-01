@@ -1,0 +1,20 @@
+#blog-page {
+  padding: 80px 0px;
+}
+
+#search-section {
+  padding: 0px 25px;
+
+  h3 {
+    @include h3;
+  }
+
+  input {
+    border: none;
+    height: 75px;
+    width: 35%;
+    background: #f3f3f4;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+}
