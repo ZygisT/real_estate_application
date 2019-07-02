@@ -28,14 +28,6 @@ export default class BlogPage extends Component {
       .then(function() {});
   }
 
-  // posts = () => {
-  //   const postsData = this.state.blogPosts
-  //   console.log(postsData)
-  //   return postsData.map((post, i) => {
-  //     return console.log(post)
-  //   })
-  // }
-
   loopPostings = () => {
     const postsData = this.state.blogPosts
     return postsData.map((post, i) => {
@@ -118,7 +110,7 @@ export default class BlogPage extends Component {
           </section>
 
           <section id="post-section">
-          {isFetching ? <span>Loading...</span> : this.loopPostings() }
+          {isFetching ? <span className="isLoading">Loading...</span> : this.loopPostings() }
           </section>
         </div>
       </section>

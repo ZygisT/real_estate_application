@@ -179,3 +179,15 @@
 
   }
 }
+
+
+.isLoading {
+  padding: 15px 25px;
+  width: 175px;
+  text-align: center;
+  font-size: 16px;
+  background: $primary-theme-color;
+  color: $primary-font-color;
+  margin: 25px;
+  transition: $primary-transition;
+}
