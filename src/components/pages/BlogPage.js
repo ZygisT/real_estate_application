@@ -6,6 +6,7 @@ export default class BlogPage extends Component {
   constructor() {
     super();
     this.state = {
+      isFetching: true,
       blogPosts: '',
       items: [1, 2, 3],
       search: ''
@@ -17,7 +18,8 @@ export default class BlogPage extends Component {
     axios.get('/api/posts')
       .then((response) => {
         this.setState({
-          blogPosts: response.data
+          blogPosts: response.data,
+          isFetching: false
         })
       })
       .catch(function(error) {
@@ -28,64 +30,65 @@ export default class BlogPage extends Component {
 
   // posts = () => {
   //   const postsData = this.state.blogPosts
-    
+  //   console.log(postsData)
   //   return postsData.map((post, i) => {
-  //     console.log('post')
+  //     return console.log(post)
   //   })
   // }
 
-  // loopPostings = () => {
-  //   const postsData = this.state.blogPosts
-  //   console.log(postsData)
-  //   const items = this.state.items;
-  //   return postsData.map((post, i) => {
-  //     return (
-  //       <div key={i} className="post-card">
-  //         <div className="inner-wrapper">
-  //           <h3 className="topic-title">This is the title of the topic.</h3>
+  loopPostings = () => {
+    const postsData = this.state.blogPosts
+    return postsData.map((post, i) => {
+      let postTime = post.postDate
+      let formattedTime = new Date(postTime)
+      console.log(formattedTime)
+      return (
+        <div key={i} className="post-card">
+          <div className="inner-wrapper">
+            <h3 className="topic-title">{post.postTitle}</h3>
 
-  //           <div className="post-details">
-  //             <span className="username">Emillia Warren</span>
-  //             <span className="time-posted"> - June 7, 2019</span>
-  //           </div>
+            <div className="post-details">
+              <span className="username">{post.postAuthor}</span>
+              <span className="time-posted"> - {postTime}</span>
+            </div>
 
-  //           <div className="post-img" />
+            <div className="post-img" style={{
+                backgroundImage: `url(${post.postImageAddress})`}}/>
 
-  //           <div className="post-topic">
-  //             <p>
-  //               Think you have a “photogenic side” for camera? So does your
-  //               home! We will teach you how to take interesting picture of your
-  //               house to make your listings stand out!
-  //             </p>
-  //           </div>
+            <div className="post-topic">
+              <p>
+                {post.postTopic}
+              </p>
+            </div>
 
-  //           <div className="misc">
-  //             <div className="comment-count-box">
-  //               <i className="far fa-comment-alt comment-icon" />
-  //               <span className="comment-num">0 comments</span>
-  //             </div>
+            <div className="misc">
+              <div className="comment-count-box">
+                <i className="far fa-comment-alt comment-icon" />
+                <span className="comment-num">{post.postComments} comments</span>
+              </div>
 
-  //             <div className="tags-box">
-  //               <span className="tags-text">Tags:</span>
+              <div className="tags-box">
+                <span className="tags-text">Tags:</span>
 
-  //               <div className="tags-container">
-  //                 <span className="tag">Apartment</span>
-  //                 <span className="tag">New</span>
-  //                 <span className="tag">Modern</span>
-  //                 <span className="tag">Photos</span>
-  //                 <span className="tag">Learning</span>
-  //               </div>
-  //             </div>
-  //           </div>
+                <div className="tags-container">
+                  <span className="tag">Apartment</span>
+                  <span className="tag">New</span>
+                  <span className="tag">Modern</span>
+                  <span className="tag">Photos</span>
+                  <span className="tag">Learning</span>
+                </div>
+              </div>
+            </div>
 
-  //           <button className="primary-btn">Read More</button>
-  //         </div>
-  //       </div>
-  //     );
-  //   });
-  // };
+            <button className="primary-btn">Read More</button>
+          </div>
+        </div>
+      );
+    });
+  };
 
   render() {
+    const isFetching = this.state.isFetching
     return (
       <section id="blog-page">
         <div className="center-content">
@@ -112,8 +115,7 @@ export default class BlogPage extends Component {
           </section>
 
           <section id="post-section">
-          {/* {this.posts()} */}
-          {/* {this.loopPostings()} */}
+          {isFetching ? <span>Loading...</span> : this.loopPostings() }
           </section>
         </div>
       </section>
