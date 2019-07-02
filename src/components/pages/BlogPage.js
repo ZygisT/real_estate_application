@@ -1,62 +1,89 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 
 export default class BlogPage extends Component {
   constructor() {
     super();
     this.state = {
+      blogPosts: '',
       items: [1, 2, 3],
       search: ''
     };
   }
 
-  loopPostings = () => {
-    const items = this.state.items;
-    return items.map((post, i) => {
-      return (
-        <div key={i} className="post-card">
-          <div className="inner-wrapper">
-            <h3 className="topic-title">This is the title of the topic.</h3>
+  componentDidMount() {
+    // Make a request to backend
+    axios.get('/api/posts')
+      .then((response) => {
+        this.setState({
+          blogPosts: response.data
+        })
+      })
+      .catch(function(error) {
+        console.log(error);
+      })
+      .then(function() {});
+  }
 
-            <div className="post-details">
-              <span className="username">Emillia Warren</span>
-              <span className="time-posted"> - June 7, 2019</span>
-            </div>
+  // posts = () => {
+  //   const postsData = this.state.blogPosts
+    
+  //   return postsData.map((post, i) => {
+  //     console.log('post')
+  //   })
+  // }
 
-            <div className="post-img" />
+  // loopPostings = () => {
+  //   const postsData = this.state.blogPosts
+  //   console.log(postsData)
+  //   const items = this.state.items;
+  //   return postsData.map((post, i) => {
+  //     return (
+  //       <div key={i} className="post-card">
+  //         <div className="inner-wrapper">
+  //           <h3 className="topic-title">This is the title of the topic.</h3>
 
-            <div className="post-topic">
-              <p>
-                Think you have a “photogenic side” for camera? So does your
-                home! We will teach you how to take interesting picture of your
-                house to make your listings stand out!
-              </p>
-            </div>
+  //           <div className="post-details">
+  //             <span className="username">Emillia Warren</span>
+  //             <span className="time-posted"> - June 7, 2019</span>
+  //           </div>
 
-            <div className="misc">
-              <div className="comment-count-box">
-                <i className="far fa-comment-alt comment-icon" />
-                <span className="comment-num">0 comments</span>
-              </div>
+  //           <div className="post-img" />
 
-              <div className="tags-box">
-                <span className="tags-text">Tags:</span>
+  //           <div className="post-topic">
+  //             <p>
+  //               Think you have a “photogenic side” for camera? So does your
+  //               home! We will teach you how to take interesting picture of your
+  //               house to make your listings stand out!
+  //             </p>
+  //           </div>
 
-                <div className="tags-container">
-                  <span className="tag">Apartment</span>
-                  <span className="tag">New</span>
-                  <span className="tag">Modern</span>
-                  <span className="tag">Photos</span>
-                  <span className="tag">Learning</span>
-                </div>
-              </div>
-            </div>
+  //           <div className="misc">
+  //             <div className="comment-count-box">
+  //               <i className="far fa-comment-alt comment-icon" />
+  //               <span className="comment-num">0 comments</span>
+  //             </div>
 
-            <button className="primary-btn">Read More</button>
-          </div>
-        </div>
-      );
-    });
-  };
+  //             <div className="tags-box">
+  //               <span className="tags-text">Tags:</span>
+
+  //               <div className="tags-container">
+  //                 <span className="tag">Apartment</span>
+  //                 <span className="tag">New</span>
+  //                 <span className="tag">Modern</span>
+  //                 <span className="tag">Photos</span>
+  //                 <span className="tag">Learning</span>
+  //               </div>
+  //             </div>
+  //           </div>
+
+  //           <button className="primary-btn">Read More</button>
+  //         </div>
+  //       </div>
+  //     );
+  //   });
+  // };
 
   render() {
     return (
@@ -85,7 +112,8 @@ export default class BlogPage extends Component {
           </section>
 
           <section id="post-section">
-          {this.loopPostings()}
+          {/* {this.posts()} */}
+          {/* {this.loopPostings()} */}
           </section>
         </div>
       </section>
