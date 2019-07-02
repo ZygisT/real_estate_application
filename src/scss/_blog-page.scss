@@ -110,6 +110,7 @@
   
       .post-topic {
         padding: 20px 0px;
+        @include paragraph-styling;
       }
   
       .misc {

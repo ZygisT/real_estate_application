@@ -39,9 +39,16 @@ export default class BlogPage extends Component {
   loopPostings = () => {
     const postsData = this.state.blogPosts
     return postsData.map((post, i) => {
-      let postTime = post.postDate
-      let formattedTime = new Date(postTime)
-      console.log(formattedTime)
+
+      // Format the date of the post from timestamp
+      let options = { year: 'numeric', month: 'long', day: 'numeric' }
+      let formattedPostTime = new Date(post.postDate).toLocaleDateString('en-US', options)
+      
+      // Loop thru post tags to output them in the tags container
+      let postTags = post.postTags.map((tag, i) => {
+        return <span key={i} className="tag">{tag}</span>
+      })
+
       return (
         <div key={i} className="post-card">
           <div className="inner-wrapper">
@@ -49,7 +56,7 @@ export default class BlogPage extends Component {
 
             <div className="post-details">
               <span className="username">{post.postAuthor}</span>
-              <span className="time-posted"> - {postTime}</span>
+              <span className="time-posted"> - {formattedPostTime}</span>
             </div>
 
             <div className="post-img" style={{
@@ -71,11 +78,7 @@ export default class BlogPage extends Component {
                 <span className="tags-text">Tags:</span>
 
                 <div className="tags-container">
-                  <span className="tag">Apartment</span>
-                  <span className="tag">New</span>
-                  <span className="tag">Modern</span>
-                  <span className="tag">Photos</span>
-                  <span className="tag">Learning</span>
+                  {postTags}
                 </div>
               </div>
             </div>
