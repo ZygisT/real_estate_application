@@ -10,9 +10,10 @@ export default class BlogPage extends Component {
       blogPosts: '',
       filteredBlogPosts: '',
       search: '',
-      sortby: 'all'
+      sortby: 'time-newest'
     };
   }
+
 
   componentDidMount() {
     // Make a request to backend
@@ -30,6 +31,20 @@ export default class BlogPage extends Component {
       .then(function() {});
   }
 
+  componentWillMount() {
+    if(this.state.isFetching) {
+      
+    } else {
+
+      let filteredBlogPosts = this.state.filteredBlogPosts.sort((a, b) => {
+        return new Date(b.postDate)- new Date(a.postDate)
+      })
+  
+      this.setState({
+        filteredBlogPosts
+      })
+    }
+  }
 
   change = (event) => {
     var name = event.target.name;
@@ -48,13 +63,13 @@ export default class BlogPage extends Component {
 
     if(this.state.sortby === 'time-newest') {
       newData = newData.sort((a, b) => {
-        return a.postDate - b.postDate
+        return new Date(b.postDate)- new Date(a.postDate)
       })
     }
 
     if(this.state.sortby === 'time-oldest') {
       newData = newData.sort((a, b) => {
-        return b.postDate - a.postDate
+        return new Date(a.postDate)- new Date(b.postDate)
       })
     }
 
@@ -176,7 +191,6 @@ export default class BlogPage extends Component {
               <span className="sort-title">Sort by:</span>
               <div className="sort-options">
                 <select className="sort-by-time-select" name="sortby" onChange={this.change}>
-                  <option value="all">All</option>
                   <option value="time-newest">Posts (New to Old)</option>
                   <option value="time-oldest">Posts (Old to New)</option>
                 </select>
