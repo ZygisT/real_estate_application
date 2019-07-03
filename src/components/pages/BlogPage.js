@@ -9,7 +9,8 @@ export default class BlogPage extends Component {
       isFetching: true,
       blogPosts: '',
       filteredBlogPosts: '',
-      search: ''
+      search: '',
+      sortby: 'all'
     };
   }
 
@@ -43,6 +44,20 @@ export default class BlogPage extends Component {
 
   filteredData() {
     let newData = this.state.blogPosts
+
+
+    if(this.state.sortby === 'time-newest') {
+      newData = newData.sort((a, b) => {
+        return a.postDate - b.postDate
+      })
+    }
+
+    if(this.state.sortby === 'time-oldest') {
+      newData = newData.sort((a, b) => {
+        return b.postDate - a.postDate
+      })
+    }
+
     if(this.state.search !== '') {
       newData = newData.filter((item) => {
         
@@ -75,6 +90,8 @@ export default class BlogPage extends Component {
 
     this.setState({
       filteredBlogPosts: newData
+    }, () => {
+      console.log(this.state)
     })
   }
 
@@ -158,7 +175,7 @@ export default class BlogPage extends Component {
             <div className="sort-container">
               <span className="sort-title">Sort by:</span>
               <div className="sort-options">
-                <select className="sort-by-time-select" name="sortby">
+                <select className="sort-by-time-select" name="sortby" onChange={this.change}>
                   <option value="all">All</option>
                   <option value="time-newest">Posts (New to Old)</option>
                   <option value="time-oldest">Posts (Old to New)</option>
