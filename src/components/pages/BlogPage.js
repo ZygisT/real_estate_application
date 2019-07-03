@@ -8,7 +8,6 @@ export default class BlogPage extends Component {
     this.state = {
       isFetching: true,
       blogPosts: '',
-      items: [1, 2, 3],
       search: ''
     };
   }
@@ -27,6 +26,21 @@ export default class BlogPage extends Component {
       })
       .then(function() {});
   }
+
+
+  change(event) {
+    var name = event.target.name;
+    var value = event.target.value
+    this.setState({
+      [name]:value
+    }, () => {
+      console.log(this.state)
+      this.filteredData()
+    })
+  }
+
+
+
 
   loopPostings = () => {
     const postsData = this.state.blogPosts
@@ -91,6 +105,7 @@ export default class BlogPage extends Component {
             <h3>Search</h3>
             <input
               className="search-bar"
+              name="search"
               type="text"
               placeholder="What are you looking for?"
             />
@@ -110,7 +125,7 @@ export default class BlogPage extends Component {
           </section>
 
           <section id="post-section">
-          {isFetching ? <span className="isLoading">Loading...</span> : this.loopPostings() }
+          {isFetching ? <div className="loader-box"><div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div><span className="isLoading">Loading...</span></div> : this.loopPostings() }
           </section>
         </div>
       </section>
