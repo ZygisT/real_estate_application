@@ -180,6 +180,13 @@
   }
 }
 
+.error-message {
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+  color: $primary-theme-color;
+}
+
 .loader-box {
   width: 100%;
   padding: 25px;
@@ -278,16 +285,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-
-// .isLoading {
-//   padding: 15px 25px;
-//   width: 175px;
-//   text-align: center;
-//   font-size: 16px;
-//   background: $primary-theme-color;
-//   color: $primary-font-color;
-//   margin: 25px;
-//   transition: $primary-transition;
-// }

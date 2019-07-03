@@ -8,6 +8,7 @@ export default class BlogPage extends Component {
     this.state = {
       isFetching: true,
       blogPosts: '',
+      filteredBlogPosts: '',
       search: ''
     };
   }
@@ -18,6 +19,7 @@ export default class BlogPage extends Component {
       .then((response) => {
         this.setState({
           blogPosts: response.data,
+          filteredBlogPosts: response.data,
           isFetching: false
         })
       })
@@ -28,22 +30,62 @@ export default class BlogPage extends Component {
   }
 
 
-  change(event) {
+  change = (event) => {
     var name = event.target.name;
-    var value = event.target.value
+    var value = event.target.value;
     this.setState({
       [name]:value
     }, () => {
-      console.log(this.state)
+      // console.log(this.state)
       this.filteredData()
     })
   }
 
+  filteredData() {
+    let newData = this.state.blogPosts
+    if(this.state.search !== '') {
+      newData = newData.filter((item) => {
+        
+        // Set data strings to be lowercase
+        let postTitle = item.postTitle.toLowerCase()
+        let postAuthor = item.postAuthor.toLowerCase()
 
+        // Create arrays that hold tag strings
+        let postTags = item.postTags.map((item) => {
+          return item.toLowerCase();
+        })
+
+        // Merge all data into one array
+        let postDataArray = [postTitle, postAuthor, postTags]
+
+        // Join all data entries in the array to create one string
+        let jointPostsDataArray = postDataArray.join(':')
+
+        // Set search string to lowerstring
+        let searchText = this.state.search.toLowerCase()
+
+        // Match the data string with search string
+        let n = jointPostsDataArray.match(searchText)
+
+        if(n != null) {
+          return true
+        }
+      })
+    }
+
+    this.setState({
+      filteredBlogPosts: newData
+    })
+  }
 
 
   loopPostings = () => {
-    const postsData = this.state.blogPosts
+    const postsData = this.state.filteredBlogPosts
+
+    if(postsData === undefined || postsData.length === 0) {
+      return <span className='error-message'>Sorry no search results found</span>
+    }
+
     return postsData.map((post, i) => {
 
       // Format the date of the post from timestamp
@@ -104,6 +146,7 @@ export default class BlogPage extends Component {
           <section id="search-section">
             <h3>Search</h3>
             <input
+              onChange={this.change}
               className="search-bar"
               name="search"
               type="text"
