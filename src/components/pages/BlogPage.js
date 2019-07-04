@@ -84,22 +84,22 @@ export default class BlogPage extends Component {
 
         // Merge all data into one array
         let postDataArray = [postTitle, postAuthor, postTags]
-
+        
         // Join all data entries in the array to create one string
-        let jointPostsDataArray = postDataArray.join(':')
+        let jointPostsDataArray = postDataArray.join()
 
         // Set search string to lowercase
         let searchText = this.state.search.toLowerCase()
 
         // Match the data string with search string
-        // let n = jointPostsDataArray.match(searchText)
-        let n = postTitle.match(searchText)
-        let b = postAuthor.match(searchText)
+        let n = jointPostsDataArray.match(searchText)
 
-        if(n || b != null) {
+        if(n  != null) {
           return true
         }
-      })
+
+        return null
+      });
     }
 
     this.setState({
@@ -179,7 +179,7 @@ export default class BlogPage extends Component {
               className="search-bar"
               name="search"
               type="text"
-              placeholder="What are you looking for?"
+              placeholder="Enter keyword"
             />
           </section>
 
