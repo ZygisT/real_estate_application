@@ -74,6 +74,8 @@ export default class Footer extends Component {
 
                   <NavLink activeClassName='is-active' className='nav-link' to="/Blog">Blog</NavLink>
 
+                  <NavLink activeClassName='is-active' className='nav-link' to="/Agents">Agents</NavLink>
+
                   <NavLink activeClassName='is-active' className='nav-link' to="/Contact">Contact</NavLink>
                 </nav>
 
