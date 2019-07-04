@@ -28,22 +28,19 @@ export default class BlogPage extends Component {
       .catch(function(error) {
         console.log(error);
       })
-      .then(function() {});
+      .then(() => {
+        this.sortPosts()
+      });
   }
 
-  componentWillMount() {
-    if(this.state.isFetching) {
-      
-    } else {
+  sortPosts = () => {
+    let filteredBlogPosts = this.state.filteredBlogPosts.sort((a, b) => {
+      return new Date(b.postDate)- new Date(a.postDate)
+    })
 
-      let filteredBlogPosts = this.state.filteredBlogPosts.sort((a, b) => {
-        return new Date(b.postDate)- new Date(a.postDate)
-      })
-  
-      this.setState({
-        filteredBlogPosts
-      })
-    }
+    this.setState({
+      filteredBlogPosts
+    })
   }
 
   change = (event) => {
@@ -91,13 +88,15 @@ export default class BlogPage extends Component {
         // Join all data entries in the array to create one string
         let jointPostsDataArray = postDataArray.join(':')
 
-        // Set search string to lowerstring
+        // Set search string to lowercase
         let searchText = this.state.search.toLowerCase()
 
         // Match the data string with search string
-        let n = jointPostsDataArray.match(searchText)
+        // let n = jointPostsDataArray.match(searchText)
+        let n = postTitle.match(searchText)
+        let b = postAuthor.match(searchText)
 
-        if(n != null) {
+        if(n || b != null) {
           return true
         }
       })
@@ -105,8 +104,6 @@ export default class BlogPage extends Component {
 
     this.setState({
       filteredBlogPosts: newData
-    }, () => {
-      console.log(this.state)
     })
   }
 
@@ -191,8 +188,8 @@ export default class BlogPage extends Component {
               <span className="sort-title">Sort by:</span>
               <div className="sort-options">
                 <select className="sort-by-time-select" name="sortby" onChange={this.change}>
-                  <option value="time-newest">Posts (New to Old)</option>
-                  <option value="time-oldest">Posts (Old to New)</option>
+                  <option value="time-newest">Posts (Newest to Oldest)</option>
+                  <option value="time-oldest">Posts (Oldest to Newest)</option>
                 </select>
               </div>
             </div>
