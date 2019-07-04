@@ -26,7 +26,7 @@ export default class BlogPage extends Component {
         })
       })
       .catch(function(error) {
-        console.log(error);
+        console.log(`${error}. The server is down, internet connection is slow or something went wrong with application configuration.`);
       })
       .then(() => {
         this.sortPosts()
@@ -34,13 +34,17 @@ export default class BlogPage extends Component {
   }
 
   sortPosts = () => {
-    let filteredBlogPosts = this.state.filteredBlogPosts.sort((a, b) => {
-      return new Date(b.postDate)- new Date(a.postDate)
-    })
+    if(this.state.isFetching) {
 
-    this.setState({
-      filteredBlogPosts
-    })
+    } else {
+      let filteredBlogPosts = this.state.filteredBlogPosts.sort((a, b) => {
+        return new Date(b.postDate)- new Date(a.postDate)
+      })
+  
+      this.setState({
+        filteredBlogPosts
+      })
+    }
   }
 
   change = (event) => {
