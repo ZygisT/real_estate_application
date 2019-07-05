@@ -1,0 +1,84 @@
+#agents-page {
+  padding: 80px 0px;
+
+  .agents-listing-items-container {
+    
+    .section-header {
+      margin-bottom: 40px;
+      h3 {
+        @include h3;
+        text-align: center;
+      }
+    }
+
+    .agent-card {
+      width: 350px;
+      height: auto;
+      padding: 0px 25px;
+
+      .card-img {
+        width: 100%;
+        height: 250px;
+        background: lightblue;
+      }
+
+      .agent-details {
+        padding: 20px 0px;
+        border-bottom: 1px solid $card-border-color; 
+      
+        .agent-name {
+          font-size: 20px;
+        }
+
+        .agent-description {
+          @include paragraph-styling;
+          padding: 20px 0px;
+
+        }
+
+        .contact-number {
+          display: block;
+          font-weight: 400;
+          margin-bottom: 20px;
+          .icon {
+            font-size: 20px;
+            color: $primary-theme-color;
+          }
+        }
+
+        .social-media-container {
+          margin-bottom: 20px;
+
+          .media-icon {
+            font-size: 20px;
+            color: $secondary-font-color;
+            margin-right: 20px;
+            transition: $primary-transition;
+          }
+
+          .media-icon:hover {
+            color: $secondary-theme-color;
+          }
+        }
+
+        .primary-btn {
+          @include primary-btn;
+          display: inline-block;
+          background: $primary-theme-color;
+          color: $primary-font-color;
+          border: none;
+          width: 120px;
+          margin: 0;
+          margin-bottom: 20px;
+          padding: 12px;
+
+        }
+
+        .primary-btn:hover {
+          background: $secondary-theme-color;
+
+        }
+      }
+    }
+  }
+}
