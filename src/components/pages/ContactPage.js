@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 
 export default class ContactPage extends Component {
+  
+  handleSubmit = event => {
+    event.preventDefault();
+  }
+
   render() {
     return (
       <section id="contact-page">
@@ -9,13 +14,13 @@ export default class ContactPage extends Component {
           <div className="content-container">
             
             <div className="section-header">
-              <h3>Contacts</h3>
+              <h3>Contact</h3>
             </div>
 
             <div className="section-info-container">
 
               <div className="inner-container">
-                <h5>Get in touch with us if you have any questions about real estate search or adding your property to our listings!
+                <h5>Get in touch with us regarding your real estate search or adding your property to our listings!
                 </h5>
 
                 <p>We reply within 1 business day...</p>
@@ -28,21 +33,27 @@ export default class ContactPage extends Component {
               <h3>Ask a Question</h3>
 
               <div className="form-container">
-                <form action="#">
+                <form onSubmit={this.handleSubmit}>
 
-                  <label htmlFor="yourName">Your name</label>
-                  <input type="text" placeholder="Enter your name"/>
+                  <div className="row">
+                    <input type="text" placeholder="Enter your name"/>
+                  </div>
                   
-                  <label htmlFor="yourEmail">Your email</label>
-                  <input type="text" placeholder="Enter your email"/>
+                  <div className="row">
+                    <input type="text" placeholder="Enter your email"/>
+                  </div>
 
-                  <label htmlFor="yourNumber">Your number</label>
-                  <input type="text" placeholder="Enter your number"/>
+                  <div className="row">
+                    <input type="text" placeholder="Enter your number"/>
+                  </div>
 
-                  <label htmlFor="yourMessage">Your message</label>
-                  <textarea name="yourMessage" placeholder="Your message"></textarea>
+                  <div className="row">
+                    <textarea name="yourMessage" placeholder="What can we help you with?"></textarea>
+                  </div>
 
-                  <button className="primary-btn">Send</button> 
+                  <div className="row">
+                    <button className="primary-btn" >Send</button> 
+                  </div>
                 
                 </form>
               </div>
