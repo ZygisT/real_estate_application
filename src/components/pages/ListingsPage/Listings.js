@@ -3,14 +3,50 @@ import React, { Component } from "react";
 export default class Listings extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      currentPage: 1,
+      setCurrentPage: 1,
+      listingsPerPage: 4,
+    };
     this.loopListings = this.loopListings.bind(this)
   }
 
-  loopListings() {
-    const { listingsData } = this.props;
+  handleClick = (e) => {
+    this.setState({
+      currentPage: Number(e.target.id)
+    })
+  }
 
-    return listingsData.map((listing, i) => {
+  pageNumbers = () => {
+    const { listingsData } = this.props;
+    const { listingsPerPage } = this.state
+
+    // Display page numbers
+    const pageNumbers = [];
+    let i = 1;
+    for (i; i <= Math.ceil(listingsData.length / listingsPerPage); i++) {
+      pageNumbers.push(i)
+      console.log(pageNumbers)
+    }
+
+    return pageNumbers.map(number => {
+      return (
+        <li key={number} id={number} onClick={this.handleClick} >{number}</li>
+      )
+    })
+  }
+
+
+  loopListings() {
+    // Listings data
+    const { listingsData } = this.props;
+    const {currentPage, listingsPerPage } = this.state
+
+    // Logic to determinate which index of listings to slice
+    const indexOfLastPost = currentPage * listingsPerPage;
+    const indexOfFirstPost = indexOfLastPost - listingsPerPage;
+
+    return listingsData.slice(indexOfFirstPost, indexOfLastPost).map((listing, i) => {
 
       if(this.props.globalState.viewMode === 'box') {
         // Box View
@@ -146,7 +182,14 @@ export default class Listings extends Component {
 
           {this.loopListings()}
 
+
         </section>
+
+        <div className="pagination-container">
+            <ul id="page-numbers">
+              {this.pageNumbers()}
+            </ul>
+          </div>
 
       </section>
     );
