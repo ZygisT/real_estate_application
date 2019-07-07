@@ -12,11 +12,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 function App() {
+
   return (
     <div className="App">
       <Router>
         <Header />
-
 
         <Route path="/" exact component={LandingPage} />
         <Route path="/Listings/" component={ListingsPage} />
