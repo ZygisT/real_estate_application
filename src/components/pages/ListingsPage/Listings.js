@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Listings extends Component {
   constructor() {
@@ -6,7 +7,7 @@ export default class Listings extends Component {
     this.state = {
       currentPage: 1,
       setCurrentPage: 1,
-      listingsPerPage: 4,
+      listingsPerPage: 4
     };
     this.loopListings = this.loopListings.bind(this)
   }
@@ -15,6 +16,7 @@ export default class Listings extends Component {
     this.setState({
       currentPage: Number(e.target.id)
     })
+    console.log(this.state.currentPage)
   }
 
   pageNumbers = () => {
@@ -26,12 +28,11 @@ export default class Listings extends Component {
     let i = 1;
     for (i; i <= Math.ceil(listingsData.length / listingsPerPage); i++) {
       pageNumbers.push(i)
-      console.log(pageNumbers)
     }
 
     return pageNumbers.map(number => {
       return (
-        <li key={number} id={number} onClick={this.handleClick} >{number}</li>
+        <li className="page-number" key={number} id={number} onClick={this.handleClick}>{number}</li>
       )
     })
   }
@@ -186,10 +187,12 @@ export default class Listings extends Component {
         </section>
 
         <div className="pagination-container">
-            <ul id="page-numbers">
+          <div className="inner-container">
+            <ul id="page-numbers-container">
               {this.pageNumbers()}
             </ul>
           </div>
+        </div>
 
       </section>
     );

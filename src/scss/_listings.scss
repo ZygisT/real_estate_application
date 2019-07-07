@@ -253,6 +253,41 @@
 }
 
 .pagination-container {
+  width: 100%;
+  padding: 0px 25px;
 
-  border: 1px solid red;
+  .inner-container {
+    padding: 30px 0px;
+    border-top: 1px solid $card-border-color;
+
+    #page-numbers-container {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+  
+      .page-number {
+        font-size: .75rem;
+        width: 50px;
+        height: 50px;
+        background: #f3f3f4;
+        color: $secondary-font-color;
+        text-align: center;
+        line-height: 50px;
+        margin: 0px 10px 10px 0px;
+        transition: $primary-transition;
+        cursor: pointer;
+
+      }
+
+      .page-number:hover {
+        background: $primary-theme-color;
+        color: $primary-font-color;
+      }
+    }
+  }
+}
+
+.is-active-button {
+  background: $primary-theme-color;
+  color: $primary-font-color;
 }

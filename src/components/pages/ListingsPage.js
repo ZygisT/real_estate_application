@@ -3,6 +3,7 @@ import Filter from './ListingsPage/Filter'
 import Listings from './ListingsPage/Listings'
 import listingsData from '../../data/listingsData'
 
+
 export default class ListingsPage extends Component {
   constructor() {
     super();
