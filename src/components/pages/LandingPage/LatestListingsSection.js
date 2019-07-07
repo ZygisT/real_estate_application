@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
+
 
 export default class LatestOffers extends Component {
   constructor(props) {
@@ -52,7 +54,7 @@ export default class LatestOffers extends Component {
               <span className="listing-location">
                 <i className="fas fa-map-marker-alt address-marker"></i>{listing.address}, {listing.city}, {listing.state}
               </span>
-              <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
+              <Link className='primary-btn' to="/Listings">Read More</Link>
             </div>
   
           </div>
@@ -89,7 +91,7 @@ export default class LatestOffers extends Component {
               <span className="listing-location">
               <i className="fas fa-map-marker-alt address-marker"></i>{listing.address}, {listing.city}, {listing.state}
               </span>
-              <a className='primary-btn' href="#listing-basic-details-container">Read More</a>
+              <Link className='primary-btn' to="/Listings">Read More</Link>              
             </div>
   
           </div>
