@@ -28,11 +28,29 @@ export default class Listings extends Component {
       pageNumbers.push(i)
     }
 
-    return pageNumbers.map(number => {
-      return (
-        <li className={`page-number ${this.state.currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
-      )
+    // Map thru array to determinate amount of pages
+    const pagination = pageNumbers.map(number => {
+        return (
+          <li className={`page-number ${this.state.currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
+        )
     })
+    
+    // Conditionally render pagination to reflect the amount of listings available
+    if(listingsData.length <= listingsPerPage) {
+      return (
+        <ul id="page-numbers-container">
+          {pagination}
+        </ul>
+      )
+    } else {
+      return (
+        <ul id="page-numbers-container">
+          <li onClick={this.prevPage} className="prev-btn">Previous</li>
+          {pagination}
+          <li onClick={this.nextPage} className="next-btn">Next</li>
+        </ul>
+      )
+    }
   }
 
   nextPage = () => {
@@ -211,11 +229,7 @@ export default class Listings extends Component {
 
         <div className="pagination-container">
           <div className="inner-container">
-            <ul id="page-numbers-container">
-              <li onClick={this.prevPage} className="prev-btn">Previous</li>
-              {this.pageNumbers()}
-              <li onClick={this.nextPage} className="next-btn">Next</li>
-            </ul>
+            {this.pageNumbers()}
           </div>
         </div>
 
