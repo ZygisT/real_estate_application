@@ -15,7 +15,6 @@ export default class Listings extends Component {
     this.setState({
       currentPage: Number(e.target.id)
     })
-    console.log(this.state.currentPage)
   }
 
   pageNumbers = () => {
@@ -39,19 +38,25 @@ export default class Listings extends Component {
   nextPage = () => {
     let { listingsData } = this.props
     let { listingsPerPage } = this.state
+    let { currentPage } = this.state
+    let maxPagination = Math.ceil(listingsData.length / listingsPerPage)
     
-    if(this.state.currentPage !== (listingsData.length / listingsPerPage)) {
-			this.setState({
-				currentPage: this.state.currentPage + 1
-			})
+    if(currentPage !== maxPagination) {
+			this.setState((state) => ({
+				currentPage: state.currentPage + 1
+      }), () => {
+        console.log(this.state.currentPage)
+      });
 		}
   }
 
   prevPage = () => {
     if(this.state.currentPage !== 1) {
-      this.setState({
-        currentPage: this.state.currentPage - 1
-      })
+      this.setState((state) => ({
+        currentPage: state.currentPage - 1
+      }), () => {
+        console.log(this.state.currentPage)
+      });
     }
   }
 
