@@ -32,8 +32,16 @@ export default class Listings extends Component {
 
     return pageNumbers.map(number => {
       return (
-        <li className="page-number" key={number} id={number} onClick={this.handleClick}>{number}</li>
+        <li className={`page-number ${this.state.currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
       )
+    })
+  }
+
+  setPage = (e) => {
+    const { currentPage } = this.state
+    let nextPage = currentPage + e.target.value
+    this.setState({
+      currentPage: nextPage
     })
   }
 
@@ -190,6 +198,7 @@ export default class Listings extends Component {
           <div className="inner-container">
             <ul id="page-numbers-container">
               {this.pageNumbers()}
+              <li onClick={this.setPage} value='1' className="next-btn">Next</li>
             </ul>
           </div>
         </div>
