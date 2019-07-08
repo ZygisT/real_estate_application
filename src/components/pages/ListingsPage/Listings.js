@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 export default class Listings extends Component {
   constructor() {
@@ -37,12 +36,23 @@ export default class Listings extends Component {
     })
   }
 
-  setPage = (e) => {
-    const { currentPage } = this.state
-    let nextPage = currentPage + e.target.value
-    this.setState({
-      currentPage: nextPage
-    })
+  nextPage = () => {
+    let { listingsData } = this.props
+    let { listingsPerPage } = this.state
+    
+    if(this.state.currentPage !== (listingsData.length / listingsPerPage)) {
+			this.setState({
+				currentPage: this.state.currentPage + 1
+			})
+		}
+  }
+
+  prevPage = () => {
+    if(this.state.currentPage !== 1) {
+      this.setState({
+        currentPage: this.state.currentPage - 1
+      })
+    }
   }
 
 
@@ -197,8 +207,9 @@ export default class Listings extends Component {
         <div className="pagination-container">
           <div className="inner-container">
             <ul id="page-numbers-container">
+              <li onClick={this.prevPage} className="prev-btn">Previous</li>
               {this.pageNumbers()}
-              <li onClick={this.setPage} value='1' className="next-btn">Next</li>
+              <li onClick={this.nextPage} className="next-btn">Next</li>
             </ul>
           </div>
         </div>
