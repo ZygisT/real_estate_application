@@ -5,25 +5,26 @@ export default class Listings extends Component {
     super();
     this.state = {
       currentPage: 1,
-      setCurrentPage: 1,
       listingsPerPage: 4
     };
     this.loopListings = this.loopListings.bind(this)
   }
 
   handleClick = (e) => {
-    this.setState({
-      currentPage: Number(e.target.id)
-    })
+    let num = Number(e.target.id)
+    console.log(num)
+    this.setState((state) => ({
+      currentPage: state.currentPage = num
+    }))
   }
 
   pageNumbers = () => {
     const { listingsData } = this.props;
     const { listingsPerPage } = this.state
-
-    // Display page numbers
     const pageNumbers = [];
     let i = 1;
+
+    // Display page numbers
     for (i; i <= Math.ceil(listingsData.length / listingsPerPage); i++) {
       pageNumbers.push(i)
     }
@@ -35,15 +36,20 @@ export default class Listings extends Component {
         )
     })
     
-    // Conditionally render pagination to reflect the amount of listings available
+    // Only render pagination number if listings is shorter than listings per page.
     if(listingsData.length <= listingsPerPage) {
-      return (
-        <ul id="page-numbers-container">
-          {pagination}
-        </ul>
-      )
-      
+      if(this.state.currentPage !== 1) {
+        console.log('Not 1')
+        this.setPage()
+      } else {
+        return (
+          <ul id="page-numbers-container">
+            {pagination}
+          </ul> 
+        )
+      }
     } else {
+      // Render Previous and Next buttons along with numbers
       return (
         <ul id="page-numbers-container">
           <li onClick={this.prevPage} className="prev-btn">Previous</li>
@@ -52,6 +58,10 @@ export default class Listings extends Component {
         </ul>
       )
     }
+  }
+
+  componentDidUpdate() {
+    console.log(this.state)
   }
 
   nextPage = () => {
@@ -73,6 +83,12 @@ export default class Listings extends Component {
         return {currentPage: state.currentPage - 1}
       });
     }
+  }
+
+  setPage = () => {
+    this.setState({
+      currentPage: 1
+    })
   }
 
 
