@@ -42,6 +42,7 @@ export default class Listings extends Component {
           {pagination}
         </ul>
       )
+      
     } else {
       return (
         <ul id="page-numbers-container">
