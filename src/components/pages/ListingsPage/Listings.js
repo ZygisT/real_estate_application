@@ -38,16 +38,11 @@ export default class Listings extends Component {
     
     // Only render pagination number if listings is shorter than listings per page.
     if(listingsData.length <= listingsPerPage) {
-      if(this.state.currentPage !== 1) {
-        console.log('Not 1')
-        this.setPage()
-      } else {
-        return (
-          <ul id="page-numbers-container">
-            {pagination}
-          </ul> 
-        )
-      }
+      return (
+        <ul id="page-numbers-container">
+          {pagination}
+        </ul> 
+      )
     } else {
       // Render Previous and Next buttons along with numbers
       return (
@@ -60,17 +55,12 @@ export default class Listings extends Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log(this.state)
-  }
-
   nextPage = () => {
     let { listingsData } = this.props
     let { listingsPerPage } = this.state
-    let { currentPage } = this.state
     let maxPagination = Math.ceil(listingsData.length / listingsPerPage)
     
-    if(currentPage !== maxPagination) {
+    if(this.state.currentPage !== maxPagination) {
 			this.setState((state) => {
 				return {currentPage: state.currentPage + 1}
       });
@@ -210,6 +200,11 @@ export default class Listings extends Component {
   };
 
   render() {
+    if(this.props.listingsData.length <= this.state.listingsPerPage) {
+      this.setState({
+        currentPage: 1
+      })
+    }
     return (
       <section className="listings-wrapper">
         <section id="sort-by-area">
