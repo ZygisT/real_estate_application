@@ -12,7 +12,7 @@ const agentsData = [
     agentContactNumber: '800-8765-4321',
   },
   {
-    agentImage: 'https://live.staticflickr.com/5311/14365669046_06540bbbff_b.jpg',
+    agentImage: 'https://www.littlesphotography.com/wp-content/uploads/2018/09/Moser-3472.jpg',
     agentName: 'Isabella Smith',
     agentDescription: 'My name is Isabella Smith. I am real estate agent working at Better Home. During my 15 years of being real estate agent I have accumulated knowledage and experience in real estate business world.',
     agentContactNumber: '800-1122-3344',
