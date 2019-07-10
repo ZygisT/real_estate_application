@@ -10,9 +10,14 @@ export default class Listings extends Component {
     this.loopListings = this.loopListings.bind(this)
   }
 
+  componentWillReceiveProps() {
+    this.setState({
+      currentPage: 1
+    })
+  }
+
   handleClick = (e) => {
     let num = Number(e.target.id)
-    console.log(num)
     this.setState((state) => ({
       currentPage: state.currentPage = num
     }))
@@ -31,9 +36,9 @@ export default class Listings extends Component {
 
     // Map thru array to determinate amount of pages
     const pagination = pageNumbers.map(number => {
-        return (
-          <li className={`page-number ${this.state.currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
-        )
+      return (
+        <li className={`page-number ${this.state.currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
+      )
     })
     
     // Only render pagination number if listings is shorter than listings per page.
@@ -74,13 +79,6 @@ export default class Listings extends Component {
       });
     }
   }
-
-  setPage = () => {
-    this.setState({
-      currentPage: 1
-    })
-  }
-
 
   loopListings() {
     // Listings data
@@ -200,11 +198,6 @@ export default class Listings extends Component {
   };
 
   render() {
-    if(this.props.listingsData.length <= this.state.listingsPerPage) {
-      this.setState({
-        currentPage: 1
-      })
-    }
     return (
       <section className="listings-wrapper">
         <section id="sort-by-area">
