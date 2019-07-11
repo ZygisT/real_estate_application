@@ -5,11 +5,26 @@ export default class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      menuOpen: false
+    }
+  }
+
+  toggleMenu = () => {
+    let { menuOpen } = this.state
+    if(menuOpen) {
+      this.setState({
+        menuOpen: false
+      })
+    } else {
+      this.setState({
+        menuOpen: true
+      })
     }
   }
 
   render() {
+    const openMenu = <i className="fas fa-bars fa-fw mobile-menu-icon"></i>
+    const closeMenu = <i className="fas fa-times fa-fw mobile-menu-icon spinner"></i>
     return (
         // Header start
         <header>
@@ -103,8 +118,11 @@ export default class Header extends Component {
                 </div>
 
                 <div className="header-bottom-container">
+                  <button onClick={this.toggleMenu} className="mobile-btn">
+                    {this.state.menuOpen === false ?  openMenu : closeMenu}  Menu
+                  </button>
 
-                  <nav className="navbar">
+                  <nav className={`${this.state.menuOpen === true ? 'menu-open' : 'menu-closed'}`}>
                     <NavLink exact={true} activeClassName='is-active' className='nav-link' to="/">Home</NavLink>
 
                     <NavLink activeClassName='is-active' className='nav-link' to="/Listings">Listings</NavLink>

@@ -203,15 +203,67 @@ header {
       }
   
       .header-bottom-container {
-        border: 1px solid red;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .mobile-btn {
+          display: flex;
+          align-items: center;
+          padding: 5px 0px;
+          background: $secondary-theme-color;
+          color: $primary-font-color;
+          border: none;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 1.425rem;
+          
+          // margin: 20px 0px;
+          .mobile-menu-icon {
+            font-size: 1.425rem;
+            margin-right: 5px;
+          }
+
+        }
+
+        .menu-open {
+          height: 270px;
+        }
+        .menu-closed {
+          height: 0px;
+        }
+
+        .spinner {
+          transform: rotateZ(0deg);
+          animation: spin 333ms forwards;
+        }
+
+        @keyframes spin {
+          0% {
+            transform: rotateZ(0deg);
+          }
+          100% {
+            transform: rotateZ(180deg);
+          }
+        }
+
+        .mobile-btn:focus {
+          outline: none;
+        }
   
         nav {
           display: flex;
           flex-direction: column;
-          text-align: center;
+          align-items: flex-end;
+          text-align: right;
           overflow: hidden;
           height: 0px;
+          transition: $primary-transition;
+          // border: 1px solid #778289;
+
           a {
+            width: auto;
             position: relative;
             text-decoration: none;
             text-transform: uppercase;
@@ -246,8 +298,8 @@ header {
             color: rgb(233, 34, 34);
           }
         }
+
       }
-  
     }
   }
 }
