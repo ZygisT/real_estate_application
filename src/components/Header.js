@@ -78,6 +78,52 @@ export default class Header extends Component {
           </div>
           {/* Header container end */}
 
+          <div className="mobile-header-container">
+
+            <div className="center-content">
+              <div className="header-items-container">
+
+                <div className="header-top-container">
+
+                  <div className="branding">
+                    <i className="fas fa-home branding-icon"></i>
+                    <h1>Better<span>Home</span></h1>
+                  </div>
+
+                  <div className="info-block">
+                    <p>
+                      Get in touch with us
+                    </p>
+                    <div className="info-block-phone">
+                      <i className="fas fa-phone-alt phone-icon"></i>
+                      <h4>800-1234-5678</h4>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="header-bottom-container">
+
+                  <nav className="navbar">
+                    <NavLink exact={true} activeClassName='is-active' className='nav-link' to="/">Home</NavLink>
+
+                    <NavLink activeClassName='is-active' className='nav-link' to="/Listings">Listings</NavLink>
+
+                    <NavLink activeClassName='is-active' className='nav-link' to="/About">About</NavLink>
+
+                    <NavLink activeClassName='is-active' className='nav-link' to="/Blog">Blog</NavLink>
+
+                    <NavLink activeClassName='is-active' className='nav-link' to="/Agents">Agents</NavLink>
+
+                    <NavLink activeClassName='is-active' className='nav-link' to="/Contact">Contact</NavLink>
+                  </nav>
+
+                </div>
+
+              </div>
+            </div>
+        </div>
+
         </header>
         // Header end
     )
