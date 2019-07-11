@@ -42,12 +42,12 @@ export default class Header extends Component {
             <div className="center-content">
               <div className="header-items-container">
 
-                <div className="branding">
+                <div className="branding row">
                   <i className="fas fa-home branding-icon"></i>
                   <h1>Better<span>Home</span></h1>
                 </div>
 
-                <nav>
+                <nav className="row">
                   <NavLink exact={true} activeClassName='is-active' className='nav-link' to="/">Home</NavLink>
 
                   <NavLink activeClassName='is-active' className='nav-link' to="/Listings">Listings</NavLink>
@@ -61,9 +61,10 @@ export default class Header extends Component {
                   <NavLink activeClassName='is-active' className='nav-link' to="/Contact">Contact</NavLink>
                 </nav>
 
-                <div className="info-block">
-
-                  Get in touch with us
+                <div className="info-block row">
+                  <p>
+                    Get in touch with us
+                  </p>
                   <div className="info-block-phone">
                     <i className="fas fa-phone-alt phone-icon"></i>
                     <h4>800-1234-5678</h4>
