@@ -1,5 +1,5 @@
 footer {
-  background: #0A1923;
+  background: #0a1923;
   color: $secondary-font-color;
 
   .footer-items-container {
@@ -16,11 +16,10 @@ footer {
         font-weight: 600;
         margin-bottom: 35px;
       }
-  
+
       .items-container {
         width: 33.33%;
         padding: 0px 25px;
-
       }
 
       .about {
@@ -32,7 +31,6 @@ footer {
       }
 
       .recent-posts {
-
         .post-container {
           display: flex;
           flex-direction: column;
@@ -50,8 +48,8 @@ footer {
           }
 
           .post-date {
-            font-size: .75em;
-            margin-top: .63em;
+            font-size: 0.75em;
+            margin-top: 0.63em;
           }
         }
 
@@ -61,8 +59,6 @@ footer {
       }
 
       .tags {
-
-
         .tags-container {
           display: flex;
           flex-direction: row;
@@ -75,7 +71,7 @@ footer {
             margin: 0px 10px 10px 0px;
             transition: $primary-transition;
           }
-  
+
           a:hover {
             color: $primary-font-color;
           }
@@ -91,7 +87,6 @@ footer {
         align-items: center;
         color: $primary-font-color;
 
-
         .branding-icon {
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
@@ -103,7 +98,7 @@ footer {
         h1 {
           font-size: 2rem;
           font-weight: 700;
-          
+
           span {
             font-weight: 300;
           }
@@ -123,11 +118,11 @@ footer {
         }
 
         a:hover {
-          color: $primary-font-color;           
+          color: $primary-font-color;
         }
 
         a::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 100%;
           height: 4px;
@@ -136,16 +131,56 @@ footer {
           bottom: 0;
           left: 0;
           background: $primary-theme-color;
-          transition: $primary-transition; 
+          transition: $primary-transition;
           transform: scale(0, 1);
         }
-  
+
         .is-active::after {
-          transform: scale(1, 1);  
+          transform: scale(1, 1);
         }
-  
+
         a:hover::after {
-          transform: scale(1, 1);  
+          transform: scale(1, 1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 736px) {
+  footer {
+    .footer-items-container {
+      padding: 60px 0px;
+      .items-wrapper {
+        flex-direction: column;
+
+        .items-container {
+          width: 100%;
+        }
+
+        h5 {
+          margin-bottom: 20px;
+        }
+
+        .about, .recent-posts, .tags {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  footer {
+    .footer-items-container {
+
+      .bottom-wrapper {
+        nav {
+          display: flex;
+          flex-wrap: wrap;
+          a {
+            margin-bottom: 10px;
+          }
         }
       }
     }
