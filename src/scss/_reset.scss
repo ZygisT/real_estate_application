@@ -23,8 +23,16 @@ img {
   margin: auto;
 }
 
+@media (max-width: 1590px) {
+  .center-content {
+    width: 85%;
+  }
+}
+
 @media (max-width: 768px) {
   .center-content {
     width: 100%;
   }
 }
+
+
