@@ -328,7 +328,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 736px) and (min-width: 320px) {
   header {
     .header-container {
       display: none;
@@ -336,11 +336,7 @@ header {
     .mobile-header-container {
       display: block;
     }
-  }
-}
 
-@media (max-width: 555px) {
-  header {
     .top-panel {
       .top-panel-items-container {
         flex-direction: column;
