@@ -25,7 +25,7 @@ export default class LatestOffers extends Component {
         
         return (
       
-          <div key={i} className="listing-card" style={{width: `50%`}}>
+          <div key={i} className="listing-card large">
   
             <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
   
