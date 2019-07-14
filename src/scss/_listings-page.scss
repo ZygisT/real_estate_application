@@ -23,6 +23,10 @@
       .filter-area, .listings-area {
         width: 100%;
       }
+
+      .filter-area {
+        padding-bottom: 0;
+      }
     }
   }
 }

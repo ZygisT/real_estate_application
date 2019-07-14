@@ -52,13 +52,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 25px;
 
   // Card box
   .listing-card-box {
-    width: 40%; // Controls card with
-    margin: 0px 25px 50px;
     display: flex;
     flex-direction: column; // Controls content layout in the card
+    width: calc(50% - 25px);
+    margin-bottom: 50px;
 
     .card-top {
       width: 100%;

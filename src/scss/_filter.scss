@@ -87,6 +87,16 @@
     .filter-container {
       display: flex;
       flex-direction: column;
+
+      .fields-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .top-block,
+        .bottom-block {
+          width: calc(50% - 10px);
+        }
+      }
     }
   }
 }
