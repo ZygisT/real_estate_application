@@ -59,7 +59,7 @@
   .listing-card-box {
     display: flex;
     flex-direction: column; // Controls content layout in the card
-    width: calc(50% - 25px);
+    width: calc(50% - 15px);
     margin-bottom: 50px;
 
     .card-top {
@@ -155,10 +155,9 @@
   // Card long
   .listing-card-long {
     width: 100%; // Controls card with
-    margin: 0px 25px 50px;
     display: flex;
     flex-direction: row; // Controls content layout in the card
-
+    margin-bottom: 50px;
     .card-top {
       width: 100%;
       margin-right: 30px;
