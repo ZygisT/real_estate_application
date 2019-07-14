@@ -32,10 +32,14 @@
 
     .primary-btn {
       @include primary-btn;
+      width: 140px;
+      padding: 15px 20px;
+      background: $primary-theme-color;
+      font-weight: 400;
     }
 
     .primary-btn:hover {
-      background: $primary-theme-color;
+      background: transparent;
     }
 
   }
@@ -48,7 +52,7 @@
 @media (max-width: 825px) {
   #about-section {
     .about-section-items-container {
-      height: 500px;
+      height: 480px;
       h2 {
         font-size: 35px;
       }
