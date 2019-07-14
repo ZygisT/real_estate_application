@@ -82,7 +82,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 825px) {
   #filter {
     .filter-container {
       display: flex;
@@ -95,6 +95,26 @@
         .top-block,
         .bottom-block {
           width: calc(50% - 10px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  #filter {
+    .filter-container {
+      display: flex;
+      flex-direction: column;
+
+      .fields-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .top-block,
+        .bottom-block {
+          width: 100%;
         }
       }
     }

@@ -305,3 +305,25 @@
   }
 }
 
+@media (max-width: 475px) and (min-width: 320px) {
+  #sort-by-area {
+    .sort-container {
+      .view-mode {
+        display: none;
+      }
+    }
+  }
+  .listings-container {
+
+    .listing-card-box {
+      width: 100%;
+    } 
+  }
+
+  .pagination-container {
+    .prev-btn {
+      padding: 0px 8px;
+    }
+  }
+}
+
