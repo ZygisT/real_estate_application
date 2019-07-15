@@ -41,15 +41,17 @@
     padding: 40px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .counter-box {
-      width: 250px;
+      width: 25%;
       text-align: center;
+
 
       .counter {
         font-size: 72px;
         color: $primary-theme-color;
+        line-height: 72px;
       }
 
       h3 {
@@ -114,4 +116,33 @@
 }
 
 // Media Queries
+
+@media (max-width: 1024px) {
+  #testimonials-section {
+    .testimonials-box-container {
+      flex-wrap: wrap;
+
+      .testimonial-box {
+        width: 50%;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #counter-section {
+    .counter-items-container {
+      flex-wrap: wrap;
+      .counter-box {
+        width: calc(50% - 25px);
+        padding: 25px 0px;
+      }
+
+      .counter-box:nth-child(-n+2) {
+        border-bottom: 1px solid $card-border-color;
+      }
+    }
+  }
+}
 
