@@ -6,7 +6,6 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   // border: 1px solid rgb(255, 0, 0);
-
 }
 
 h1, h2, h3, h4, h5, h6, p { 
@@ -24,6 +23,8 @@ img {
   width: 70%;
   margin: auto;
 }
+
+// Media Queries
 
 @media (max-width: 1590px) {
   .center-content {
