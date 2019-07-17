@@ -1,0 +1,113 @@
+#newsletter-section {
+  background: $primary-theme-color;
+
+  .newsletter-section-items-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 45px 25px;
+
+    .subscribe-message {
+      width: 50%;
+      h4 {
+        color: $primary-font-color;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+    }
+
+    .subscribe-form {
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 55px;
+      
+      .subscribe-input {
+        border: none;
+        font-size: 0.875rem;
+        width: 100%;
+        padding: 12px 20px;
+        height: 50px;
+
+      }
+
+      .subscribe-input:focus {
+        outline: none;
+      }
+
+      .subscribe-btn {
+        background: #0A1923;
+        color: $primary-font-color;
+        text-align: center;
+        padding: 12px 20px;
+        margin-left: 10px;
+        font-weight: 600;
+        height: 50px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $primary-font-color;
+        transition: all 300ms ease-in-out;
+      }
+
+      .subscribe-btn:hover {
+        background: $primary-font-color;
+        color: #0A1923;
+
+      }
+    }
+  }
+}
+
+@media (max-width: 825px) and (min-width: 556px) {
+  #newsletter-section {
+    .newsletter-section-items-container {
+      flex-direction: column;
+
+      .subscribe-message {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .subscribe-form {
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: column;
+
+        .subscribe-input {
+          margin-bottom: 15px;
+
+        }
+
+        .subscribe-btn {
+          margin: 0px;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 555px) {
+  #newsletter-section {
+    .newsletter-section-items-container {
+      flex-direction: column;
+
+      .subscribe-message {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      .subscribe-form {
+        width: 100%;
+        margin-left: 0px;
+        flex-direction: column;
+
+        .subscribe-input {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

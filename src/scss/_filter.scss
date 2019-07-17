@@ -1,0 +1,122 @@
+#filter {
+  .filter-container {
+    background: #545e65;
+    color: $primary-font-color;
+    padding: 40px;
+    width: 100%;
+
+    h3 {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 30px;
+    }
+
+    .fields-wrapper {
+      width: 100%;
+
+      .top-block,
+      .bottom-block {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .top-block {
+        select {
+          width: 100%;
+          height: 50px;
+          font-size: 0.875rem;
+          padding: 12px 20px;
+          color: $secondary-font-color;
+          margin-bottom: 10px;
+          border: none;
+        }
+
+        select:focus {
+          outline: none;
+        }
+      }
+
+      .bottom-block {
+
+        select {
+          width: 100%;
+          height: 50px;
+          font-size: 0.875rem;
+          padding: 12px 20px;
+          color: $secondary-font-color;
+          margin-bottom: 10px;
+          border: none;
+        }
+
+        select:focus {
+          outline: none;
+        }
+        
+        .input-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          input {
+            width: calc(50% - 5px);
+            height: 50px;
+            font-size: 0.875rem;
+            padding: 12px 20px;
+            color: $secondary-font-color;
+            margin-bottom: 10px;
+            border: none;
+          }
+
+          input:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  #filter {
+    .filter-container {
+      display: flex;
+      flex-direction: column;
+
+      .fields-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .top-block,
+        .bottom-block {
+          width: calc(50% - 10px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  #filter {
+    .filter-container {
+      display: flex;
+      flex-direction: column;
+
+      .fields-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .top-block,
+        .bottom-block {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

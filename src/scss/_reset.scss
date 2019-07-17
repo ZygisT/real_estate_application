@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  // border: 1px solid rgb(255, 0, 0);
 }
 
 h1, h2, h3, h4, h5, h6, p { 
@@ -14,3 +15,33 @@ h1, h2, h3, h4, h5, h6, p {
 img {
   display: block;
 }
+
+
+// Center content
+
+.center-content {
+  width: 70%;
+  margin: auto;
+}
+
+// Media Queries
+
+@media (max-width: 1590px) {
+  .center-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 736px) {
+  .center-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 568px) {
+  .center-content {
+    width: 100%;
+  }
+}
+
+

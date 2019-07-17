@@ -1,0 +1,32 @@
+#listings-section {
+  width: 100%;
+  .content-wrapper {
+    width: 100%;
+    display: flex;
+    .filter-area {
+      width: 33%;
+      padding: 55px 25px;
+    }
+
+    .listings-area {
+      width: 67%;
+      padding: 55px 0px; 
+    }
+  }
+}
+
+@media (max-width: 825px) {
+  #listings-section {
+    .content-wrapper {
+      flex-direction: column-reverse;
+
+      .filter-area, .listings-area {
+        width: 100%;
+      }
+
+      .filter-area {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

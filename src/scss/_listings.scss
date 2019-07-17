@@ -1,0 +1,329 @@
+#sort-by-area {
+  padding: 0px 25px;
+  margin-bottom: 35px;
+  .results-container {
+    .search-results {
+      font-size: 14px;
+      color: $secondary-font-color;
+      margin-bottom: 10px;
+    }
+  }
+
+  .sort-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .sort-options {
+      .sort-by-text {
+        font-weight: 600;
+        margin-right: 20px;
+      }
+
+      .sort-by-price-select {
+        border: none;
+        background: #f3f3f4;
+        color: $secondary-font-color;
+        padding: 12px 20px;
+        width: 250px;
+      }
+
+      .sort-by-price-select:focus {
+        outline: none;
+      }
+    }
+
+    .view-mode {
+      .view-mode-icon {
+        font-size: 20px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+
+      .is-active {
+        color: $primary-theme-color;
+      }
+    }
+  }
+}
+
+.listings-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px 25px;
+
+  // Card box
+  .listing-card-box {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px);
+    margin-bottom: 50px;
+
+    .card-top {
+      width: 100%;
+
+      .listing-img {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .listing-status {
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          background: $primary-theme-color;
+          color: $primary-font-color;
+          text-transform: uppercase;
+          padding: 12px 15px;
+          font-size: 0.875rem;
+          line-height: 1.2;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .card-bottom {
+      width: 100%;
+
+      .listing-features-container {
+        padding: 15px 0px;
+
+        .feature {
+          color: $secondary-font-color;
+          margin-right: 12px;
+        }
+
+        .feature-icon {
+          color: $primary-theme-color;
+          padding: 10px;
+        }
+      }
+
+      .price-and-description-container {
+        border-top: 1px solid $card-border-color;
+        border-bottom: 1px solid $card-border-color;
+        padding: 15px 0px;
+        .listing-price {
+          font-size: 23px;
+          margin-bottom: 15px;
+          font-weight: 600;
+          color: $primary-theme-color;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+
+        .listing-description {
+          @include paragraph-styling;
+        }
+      }
+
+      .location-and-btn-container {
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+
+        .listing-location {
+          font-size: 12px;
+          color: $secondary-font-color;
+          .address-marker {
+            font-size: 16px;
+            color: $primary-theme-color;
+            margin-right: 10px;
+          }
+        }
+
+        .primary-btn {
+          @include primary-btn;
+          background: $primary-theme-color;
+          color: $primary-font-color;
+        }
+
+        .primary-btn:hover {
+          background: $primary-font-color;
+          color: $primary-theme-color;
+        }
+      }
+    }
+  }
+
+  // Card long
+  .listing-card-long {
+    width: 100%; // Controls card with
+    display: flex;
+    flex-direction: row; // Controls content layout in the card
+    margin-bottom: 50px;
+    .card-top {
+      width: 100%;
+      margin-right: 30px;
+
+      .listing-img {
+        width: 100%;
+        height: 250px;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .listing-status {
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          background: $primary-theme-color;
+          color: $primary-font-color;
+          text-transform: uppercase;
+          padding: 12px 15px;
+          font-size: 0.875rem;
+          line-height: 1.2;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .card-bottom {
+      width: 100%;
+
+      .listing-features-container {
+        padding: 0px 0px 15px;
+
+        .feature {
+          color: $secondary-font-color;
+          margin-right: 12px;
+        }
+
+        .feature-icon {
+          color: $primary-theme-color;
+          padding: 10px;
+        }
+      }
+
+      .price-and-description-container {
+        border-top: 1px solid $card-border-color;
+        border-bottom: 1px solid $card-border-color;
+        padding: 15px 0px;
+        .listing-price {
+          font-size: 23px;
+          margin-bottom: 15px;
+          font-weight: 600;
+          color: $primary-theme-color;
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
+        }
+
+        .listing-description {
+          font-size: 16px;
+          color: $secondary-font-color;
+          line-height: 1.5;
+          font-weight: 300;
+        }
+      }
+
+      .location-and-btn-container {
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+
+        .listing-location {
+          font-size: 12px;
+          color: $secondary-font-color;
+          .address-marker {
+            font-size: 16px;
+            color: $primary-theme-color;
+            margin-right: 10px;
+          }
+        }
+
+        .primary-btn {
+          @include primary-btn;
+          background: $primary-theme-color;
+          color: $primary-font-color;
+        }
+
+        .primary-btn:hover {
+          background: $primary-font-color;
+          color: $primary-theme-color;
+        }
+      }
+    }
+  }
+}
+
+.pagination-container {
+  width: 100%;
+  padding: 0px 25px;
+
+  .inner-container {
+    padding: 30px 0px;
+    border-top: 1px solid $card-border-color;
+
+    #page-numbers-container {
+      width: 100%;
+      list-style-type: none;
+      display: flex;
+  
+      .page-number {
+        font-size: .85rem;
+        width: 50px;
+        height: 50px;
+        background: #f3f3f4;
+        color: $secondary-font-color;
+        text-align: center;
+        line-height: 50px;
+        margin: 0px 10px 10px 0px;
+        transition: $primary-transition;
+        cursor: pointer;
+      }
+
+      .is-active-button {
+        background: $primary-theme-color;
+        color: $primary-font-color;
+      }
+
+      .next-btn, .prev-btn {
+        font-size: 1rem;
+        width: 110px;
+        height: 50px;
+        background: $secondary-theme-color;
+        color: $primary-font-color;
+        text-align: center;
+        line-height: 50px;
+        margin: 0px 10px 10px 0px;
+        transition: $primary-transition;
+        cursor: pointer;
+      }
+
+      .page-number:hover, .next-btn:hover, .prev-btn:hover {
+        background: $primary-theme-color;
+        color: $primary-font-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) and (min-width: 320px) {
+  #sort-by-area {
+    .sort-container {
+      .view-mode {
+        display: none;
+      }
+    }
+  }
+  .listings-container {
+
+    .listing-card-box {
+      width: 100%;
+    } 
+  }
+
+  .pagination-container {
+    .prev-btn {
+      padding: 0px 8px;
+    }
+  }
+}
+

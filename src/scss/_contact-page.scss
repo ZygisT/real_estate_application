@@ -1,0 +1,145 @@
+#contact-page {
+  padding: 80px 0px;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-header {
+      margin-bottom: 25px;
+
+      h3 {
+        @include h3;
+      }
+    }
+
+    .section-info-container {
+      width: 60%;
+      padding: 0px 25px;
+      text-align: center;
+
+      .inner-container {
+        border-bottom: 1px solid $card-border-color;
+        padding-bottom: 40px;
+      }
+
+      h5 {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      p {
+        @include paragraph-styling;
+      }
+    }
+
+    #form-section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        @include h3;
+        padding: 40px 0px;
+      }
+
+      .form-container {
+        width: 60%;
+        padding: 0px 25px;
+
+        form {
+          .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            input,
+            textarea {
+              font-size: 0.875rem;
+              display: inline-block;
+              width: 100%;
+              padding: 12px 20px;
+              border: none;
+              background: #f3f3f4;
+              color: $secondary-font-color;
+              height: 50px;
+              transition: $primary-transition;
+            }
+
+            textarea {
+              resize: vertical;
+              height: 200px;
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+              color: $secondary-font-color;
+            }
+
+            input:focus,
+            textarea:focus {
+              outline: none;
+              box-shadow: 0 0 1px 0 $primary-theme-color;
+            }
+
+            .primary-btn {
+              @include primary-btn;
+              border: none;
+              background: $primary-theme-color;
+              display: block;
+              width: 120px;
+              font-size: 16px;
+            }
+
+            .primary-btn:hover {
+              background: $secondary-theme-color;
+            }
+
+            .primary-btn:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media (max-width: 825px) {
+  #contact-page {
+    padding: 40px 0px;
+    .content-container {
+      .section-header {
+        h3 {
+          font-size: 21px;
+        }
+      }
+
+      #form-section {
+        h3 {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 736px) and (min-width: 320px) {
+  #contact-page {
+    .content-container {
+      .section-info-container {
+        width: 100%;
+      }
+
+      #form-section {
+        .form-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
