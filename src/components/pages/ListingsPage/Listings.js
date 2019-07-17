@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 export default class Listings extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentPage: 1,
       listingsPerPage: 4
     };
-    this.loopListings = this.loopListings.bind(this)
+    
   }
 
   componentWillReceiveProps() {
@@ -25,7 +25,7 @@ export default class Listings extends Component {
 
   pageNumbers = () => {
     const { listingsData } = this.props;
-    const { listingsPerPage } = this.state
+    const { listingsPerPage, currentPage } = this.state
     const pageNumbers = [];
     let i = 1;
 
@@ -37,7 +37,7 @@ export default class Listings extends Component {
     // Map thru array to determinate amount of pages
     const pagination = pageNumbers.map(number => {
       return (
-        <li className={`page-number ${this.state.currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
+        <li className={`page-number ${currentPage === number ? 'is-active-button' : ''}`} key={number} id={number} onClick={this.handleClick}>{number}</li>
       )
     })
     
@@ -62,10 +62,10 @@ export default class Listings extends Component {
 
   nextPage = () => {
     let { listingsData } = this.props
-    let { listingsPerPage } = this.state
+    let { listingsPerPage, currentPage } = this.state
     let maxPagination = Math.ceil(listingsData.length / listingsPerPage)
     
-    if(this.state.currentPage !== maxPagination) {
+    if(currentPage !== maxPagination) {
 			this.setState((state) => {
 				return {currentPage: state.currentPage + 1}
       });
@@ -73,14 +73,15 @@ export default class Listings extends Component {
   }
 
   prevPage = () => {
-    if(this.state.currentPage !== 1) {
+    let { currentPage } = this.state
+    if(currentPage !== 1) {
       this.setState((state) => {
         return {currentPage: state.currentPage - 1}
       });
     }
   }
 
-  loopListings() {
+  loopListings = () => {
     // Listings data
     const { listingsData } = this.props;
     const {currentPage, listingsPerPage } = this.state
