@@ -3,6 +3,7 @@
 __This application has been created using React.js, Express.js and MongoDB.__
 
 **About app:**
+
 This is real estate app that has the primary purpose of displaying listings of houses and blog posts. The house data is being pulled from an external Javascript file meanwhile blog posts are being fetched from MongoDB.
 
 **Application features:**
@@ -11,13 +12,16 @@ This is real estate app that has the primary purpose of displaying listings of h
 * Mobile Responsive (Full App)
 
 **Objective:**
+
 The objective of this project was to use React.js, Express.js and MongoDB to create a stylish single page real estate application that manipulates data (filter, sort, push, slice, map etc.) and displays that data in the form of listings of houses and blog posts.
 
 **My Role:**
+
 The app has been written (coded) by me from start to finish.
 (Panning the structure of the app, searching for design inspiration,searching, processing and supplying project assets).
 
 **Project difficulties & solutions:**
+
 One of the most challenging parts of application was to filter house listings data. 
 I've used _.filter()_, _.sort()_, _.map()_ and _spread operator_ array methods to process the data in the parent component which passes the processed data into listings component where the data is being _.map()_ and rendered.
 
