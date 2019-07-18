@@ -5,7 +5,6 @@ header {
   background: $secondary-theme-color;
 
   .top-panel {
-    // background: #162a39c5;
     background: $secondary-theme-color;
     border: 1px solid $border-color;
 
@@ -48,7 +47,6 @@ header {
 
   .header-container {
     display: block;
-    // background: rgba(22, 42, 57, 0.472);
 
     .header-items-container {
       display: flex;
@@ -85,7 +83,6 @@ header {
           text-decoration: none;
           text-transform: uppercase;
           margin: 0px 20px;
-          // margin-right: 35px;
           font-weight: 600;
           color: $primary-font-color;
         }
@@ -217,8 +214,6 @@ header {
         text-transform: uppercase;
         font-weight: 600;
         font-size: 1.125rem;
-
-        // margin: 20px 0px;
         .mobile-menu-icon {
           font-size: 1.125rem;
           margin-right: 5px;
@@ -258,7 +253,6 @@ header {
         overflow: hidden;
         height: 0px;
         transition: $primary-transition;
-        // border: 1px solid #778289;
 
         a {
           width: auto;
