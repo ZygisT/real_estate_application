@@ -61,7 +61,7 @@ export default class Footer extends Component {
 
               <div className="branding">
                 <i className="fas fa-home branding-icon"></i>
-                <h1>Better<span>Home</span></h1>
+                <h1>Find<span>Home</span></h1>
               </div>
 
               <div className="nav-links">

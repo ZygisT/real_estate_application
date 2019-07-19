@@ -36,7 +36,7 @@ export default class AboutPage extends Component {
                   <br/>
 
 
-                  Expertise — Service and integrity supported by commercial expertise is where Better Home stands apart. A depth of local knowledge and eye for opportunities, we are your property partner.
+                  Expertise — Service and integrity supported by commercial expertise is where Find Home stands apart. A depth of local knowledge and eye for opportunities, we are your property partner.
                   </p>
               </div>
 
@@ -122,7 +122,7 @@ export default class AboutPage extends Component {
                 <div className="testimonial-box">
                   <div className="top-block">
 
-                    <p>I've been searching to rent a house for a while. Finally came across Better Home and these people helped me out tremendously.</p>
+                    <p>I've been searching to rent a house for a while. Finally came across Find Home and these people helped me out tremendously.</p>
 
                   </div>
 
@@ -135,7 +135,7 @@ export default class AboutPage extends Component {
                 <div className="testimonial-box">
                   <div className="top-block">
 
-                    <p>Better Home is one of the greatest real estate companies I've ever come across. Working with these people were so enjoyable I've ended up checking out 20 different homes and they helped me choose the best one to suit my needs.</p>
+                    <p>Find Home is one of the greatest real estate companies I've ever come across. Working with these people were so enjoyable I've ended up checking out 50 different homes and they helped me choose the best one to suit my needs.</p>
                   </div>
 
                   <div className="bottom-block">
