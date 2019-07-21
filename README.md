@@ -15,11 +15,11 @@ This is real estate app that has the primary purpose of displaying listings of h
 
 ### Objective:
 
-The objective of this project was to use React.js, Express.js and MongoDB to create a stylish single page real estate application that manipulates data (filter, sort, push, slice, map etc.) and displays that data in the form of listings of houses and blog posts.
+The objective of this project was to use React.js, Express.js and MongoDB to create a stylish single page real estate application that manipulates data (filter, sort, push, slice, map etc.) and displays listings of houses and blog posts.
 
 ### My Role:
 
-The app has been written (coded) by me from start to finish.
+The app has been created by me from start to finish.
 (Panning the structure of the app, searching for design inspiration,searching, processing and supplying project assets).
 
 ### Project difficulties & solutions:
