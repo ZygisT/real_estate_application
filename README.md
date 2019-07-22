@@ -24,11 +24,10 @@ The app has been created by me from start to finish.
 
 ### Project difficulties & solutions:
 
-One of the most challenging parts of application was to filter house listings data. 
-I've used _`.filter(), .sort(), .map()`_ and _`spread operator`_ array methods to process the data in the parent component which passes the processed data into listings component where the data is being _`.map()`_ and rendered.
+One of the most challenging parts of application was to process data and display it in listings page. I've imported the data from an external javascript file and used _`.filter(), .sort(), .map()`_ and _`spread operator`_ array methods to process the data in the parent component which passes the processed data into listings component where the data is being _`.map()`_ and rendered.
 
 The second problem I've faced was Blog Posts page not displaying the posts. Turned out while using _`Axios`_ and sending a request to database it takes a split second for data to arrive into application and React could not render data that wasn't there. To solve this problem I simply created _`isFetching`_ state that has initial value of _`true`_ while the data is being fetched and then is set to _`false`_ when data arrives. Afterwards I wrote a simply ternary operator that checks if _`isFetching`_ is true or false. If data has been fetched I execute function to loop and render posts.
-However I've noticed that in the process application gives no visual feedback to the user of whats happening. To solve this issue I used a simple "loader spinner" and displayed it while _`isFetching`_ is true (fetching data) to improve user experience and allow them to understand whats going on.
+However I've noticed that in the process application gave no visual feedback to the user of whats happening. To solve this issue I used a simple animated "loader" icon and displayed it while _`isFetching`_ is true (fetching data) to improve user experience and allow them to understand whats going on.
 
 Another challage was to create search bar feature to search blog posts and sort posts by date.
 To be able to search for posts I have made sure all posts data were lowercased, created arrays to hold posts tags, merged all data into an array (array per post) and then _`.join()`_ all array data into single string of data. Afterwards I've used _`.match()`_ method to match search bar string with posts data string to find posts.
