@@ -26,6 +26,7 @@
   z-index: -1;
 }
 
+// Paragraph Styling
 @mixin paragraph-styling {
   font-size: 16px;
   color: $secondary-font-color;
@@ -33,6 +34,7 @@
   font-weight: 300;
 }
 
+// Primary h3/header
 @mixin h3 {
   font-size: 30px;
   color: $primary-theme-color;

@@ -49,6 +49,8 @@
   @include image-overlay;
 }
 
+// Media Queries
+
 @media (max-width: 825px) {
   #about-section {
     .about-section-items-container {

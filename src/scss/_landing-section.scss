@@ -43,6 +43,8 @@
   @include image-overlay;
 }
 
+// Media Queries
+
 @media (max-width: 1024px) {
   #landing-section {
     .landing-section-items-container {
