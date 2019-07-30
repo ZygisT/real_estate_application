@@ -10,6 +10,7 @@ const listingsData = [
     price: 220000,
     floorSpace: 185,
     image: "./house-images/house-1.jpg",
+    imageLg: "./house-images/lg-img/house-1-lg.jpg",
     status: 'Sale'
   },
   {
@@ -23,6 +24,7 @@ const listingsData = [
     price: 1800,
     floorSpace: 191,
     image: "./house-images/house-2.jpg",
+    imageLg: "./house-images/lg-img/house-2-lg.jpg",
     status: 'Rent'
   },
   {
@@ -35,8 +37,8 @@ const listingsData = [
     bathrooms: 1,
     price: 175600,
     floorSpace: 122,
-    image:
-      "./house-images/house-3.jpg",
+    image: "./house-images/house-3.jpg",
+    imageLg: "./house-images/lg-img/house-3-lg.jpg",
     status: 'Sale'
   },
   {
@@ -51,6 +53,7 @@ const listingsData = [
     floorSpace: 205,
     image:
       "./house-images/house-4.jpg",
+    imageLg: "./house-images/lg-img/house-4-lg.jpg",
     status: 'Sale'
 
   },
@@ -66,6 +69,7 @@ const listingsData = [
     floorSpace: 188,
     image:
       "./house-images/house-5.jpg",
+    imageLg: "./house-images/lg-img/house-5-lg.jpg",
     status: 'Rent'
 
   },

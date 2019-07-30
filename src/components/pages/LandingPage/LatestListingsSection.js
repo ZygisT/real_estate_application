@@ -27,7 +27,7 @@ export default class LatestOffers extends Component {
       
           <div key={i} className="listing-card large">
   
-            <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+            <div className="listing-img" style={{background: `url(${listing.imageLg}) no-repeat center`, backgroundSize: 'cover'}}>
   
             <span className="listing-status">
               {listing.status}
@@ -64,7 +64,7 @@ export default class LatestOffers extends Component {
       
           <div key={i} className="listing-card">
   
-            <div className="listing-img" style={{background: `url(${listing.image}) no-repeat center`, backgroundSize: 'cover'}}>
+            <div className="listing-img" style={{background: `url(${listing.imageLg}) no-repeat center`, backgroundSize: 'cover'}}>
   
             <span className="listing-status">
               {listing.status}
