@@ -36,19 +36,19 @@ export default class ContactPage extends Component {
                 <form onSubmit={this.handleSubmit}>
 
                   <div className="row">
-                    <input type="text" placeholder="Enter your name"/>
+                    <input type="text" aria-label="Input for name" placeholder="Enter your name"/>
                   </div>
                   
                   <div className="row">
-                    <input type="text" placeholder="Enter your email"/>
+                    <input type="text" aria-label="Input for email" placeholder="Enter your email"/>
                   </div>
 
                   <div className="row">
-                    <input type="text" placeholder="Enter your number"/>
+                    <input type="text" aria-label="Input for number" placeholder="Enter your number"/>
                   </div>
 
                   <div className="row">
-                    <textarea name="yourMessage" placeholder="What can we help you with?"></textarea>
+                    <textarea name="yourMessage" aria-label="Textarea for message" placeholder="What can we help you with?"></textarea>
                   </div>
 
                   <div className="row">

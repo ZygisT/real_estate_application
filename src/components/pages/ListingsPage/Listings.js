@@ -213,6 +213,7 @@ export default class Listings extends Component {
                 onChange={this.props.change}
                 className="sort-by-price-select"
                 name="sortby"
+                aria-label="select for sorting listings by price"
               >
                 <option value="all">All</option>
                 <option value="price-dsc">Price (Low to High)</option>

@@ -84,19 +84,19 @@ export default class Filter extends Component {
           <div className="fields-wrapper">
             <div className="top-block">
               <label htmlFor="properyStatus">Property status</label>
-              <select name="propertyStatus" onChange={this.props.change}>
+              <select aria-label="select for property status" name="propertyStatus" onChange={this.props.change}>
                 <option value="All">All</option>
                 {this.homeStatus()}
               </select>
 
               <label htmlFor="propertyTypes">Property type</label>
-              <select name="propertyTypes" onChange={this.props.change}>
+              <select aria-label="select for property type" name="propertyTypes" onChange={this.props.change}>
                 <option value="All">All</option>
                 {this.homeTypes()}
               </select>
 
               <label htmlFor="propertyLocation">Location</label>
-              <select name="propertyCity" onChange={this.props.change}>
+              <select aria-label="select for property city" name="propertyCity" onChange={this.props.change}>
                 <option value="All">All</option>
                 {this.cities()}
               </select>
@@ -106,21 +106,21 @@ export default class Filter extends Component {
               <label htmlFor="Price">Price</label>
               <div className="input-container">
                 {/* <input type="text" name="min_price" onChange={this.props.change} value={this.props.globalState.min_price} /> */}
-                <NumberFormat thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="min_price" onChange={this.props.changeInt} value={this.props.globalState.min_price} />
-                <NumberFormat thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="max_price" onChange={this.props.changeInt} value={this.props.globalState.max_price} />
+                <NumberFormat aria-label="input for min price" thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="min_price" onChange={this.props.changeInt} value={this.props.globalState.min_price} />
+                <NumberFormat aria-label="input for max price" thousandSeparator={true} allowNegative={false} prefix={'$'} type="text" name="max_price" onChange={this.props.changeInt} value={this.props.globalState.max_price} />
 
                 {/* <input type="text" name="max_price" onChange={this.props.change} value={this.props.globalState.max_price}/> */}
               </div>
 
               <label htmlFor="Bedrooms">Bedrooms</label>
-              <select name="bedrooms" onChange={this.props.changeInt}>
+              <select aria-label="select for number of bedrooms" name="bedrooms" onChange={this.props.changeInt}>
                 <option value="0">All</option>
                 {this.bedrooms()}
               </select>
 
 
               <label htmlFor="Bathrooms">Bathrooms</label>
-              <select name="bathrooms" onChange={this.props.changeInt}>
+              <select aria-label="select for number of bathrooms" name="bathrooms" onChange={this.props.changeInt}>
                 <option value="0">All</option>
                 {this.bathrooms()}
               </select>
