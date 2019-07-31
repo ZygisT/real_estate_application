@@ -15,7 +15,7 @@ export default class NewsletterSection extends Component {
             </div>
 
             <div className="subscribe-form">
-              <input className='subscribe-input' type="text" name='email' placeholder='Enter your email'/>
+              <input className='subscribe-input' aria-label='newsletter subcribe input' type="text" name='email' placeholder='Enter your email'/>
 
               <a href="#newsletter-section" className="subscribe-btn">Subscribe</a>
             </div>

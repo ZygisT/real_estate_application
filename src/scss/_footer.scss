@@ -1,6 +1,6 @@
 footer {
   background: #0a1923;
-  color: $secondary-font-color;
+  color: $third-font-color;
 
   .footer-items-container {
     padding: 120px 0px;
@@ -64,7 +64,7 @@ footer {
           flex-direction: row;
           flex-wrap: wrap;
           a {
-            color: $secondary-font-color;
+            color: $third-font-color;
             padding: 12px 20px;
             border: 1px solid $border-color;
             text-decoration: none;
@@ -113,7 +113,7 @@ footer {
           text-transform: uppercase;
           margin-right: 15px;
           font-weight: 400;
-          color: $secondary-font-color;
+          color: $third-font-color;
           transition: $primary-transition;
         }
 

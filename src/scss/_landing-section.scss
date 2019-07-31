@@ -1,5 +1,5 @@
 #landing-section {
-  background: url("../images/landing-img.jpg") no-repeat;
+  background: url("../images/landing-image.webp") no-repeat;
   background-size: cover;
   background-position: left;
   position: relative;
@@ -7,7 +7,7 @@
   filter: contrast(110%);
 
   .landing-section-items-container {
-    height: 85vh;
+    height: 820px;
     display: flex;
     flex-direction: column;
     justify-content: center;
