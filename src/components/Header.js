@@ -40,9 +40,9 @@ export default class Header extends Component {
                 </div>
 
                 <div className="right-col">
-                  <a className="social-media-icons" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f fa-fw"></i></a>
-                  <a className="social-media-icons" href="https://twitter.com/?lang=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter fa-fw"></i></a>
-                  <a className="social-media-icons" href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram fa-fw"></i></a>
+                  <a className="social-media-icons" aria-label='facebook social media icon' href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f fa-fw"></i></a>
+                  <a className="social-media-icons" aria-label='twitter social media icon' href="https://twitter.com/?lang=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter fa-fw"></i></a>
+                  <a className="social-media-icons" aria-label='instagram social media icon' href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram fa-fw"></i></a>
                 </div>
                 
               </div>

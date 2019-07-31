@@ -10,7 +10,7 @@ const listingsData = [
     price: 220000,
     floorSpace: 185,
     image: "./house-images/listing-images/house-1.jpg",
-    imageLg: "./house-images/lg-img/house-1-lg.jpg",
+    imageLg: "./house-images/lg-img/hs-1.jpg",
     status: 'Sale'
   },
   {
@@ -24,7 +24,7 @@ const listingsData = [
     price: 1800,
     floorSpace: 191,
     image: "./house-images/listing-images/house-2.jpg",
-    imageLg: "./house-images/lg-img/house-2-lg.jpg",
+    imageLg: "./house-images/lg-img/hs-2.jpg",
     status: 'Rent'
   },
   {
@@ -38,7 +38,7 @@ const listingsData = [
     price: 175600,
     floorSpace: 122,
     image: "./house-images/listing-images/house-3.jpg",
-    imageLg: "./house-images/lg-img/house-3-lg.jpg",
+    imageLg: "./house-images/lg-img/hs-3.jpg",
     status: 'Sale'
   },
   {
@@ -53,7 +53,7 @@ const listingsData = [
     floorSpace: 205,
     image:
       "./house-images/listing-images/house-4.jpg",
-    imageLg: "./house-images/lg-img/house-4-lg.jpg",
+    imageLg: "./house-images/lg-img/hs-4.jpg",
     status: 'Sale'
 
   },
@@ -69,7 +69,7 @@ const listingsData = [
     floorSpace: 188,
     image:
       "./house-images/listing-images/house-5.jpg",
-    imageLg: "./house-images/lg-img/house-5-lg.jpg",
+    imageLg: "./house-images/lg-img/hs-5.jpg",
     status: 'Rent'
 
   },
