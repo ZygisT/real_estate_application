@@ -25,7 +25,7 @@ export default class Footer extends Component {
 
                 <div className="post-container">
 
-                  <a href="#footer">New luxurious house at 2590 East Valley Road, California.</a>
+                  <span className="post-title">New luxurious house at 2590 East Valley Road, California.</span>
 
                   <span className="post-date">June 28, 2019</span>
 
@@ -33,7 +33,7 @@ export default class Footer extends Component {
 
                 <div className="post-container">
 
-                  <a href="#footer">How to take images of your house the right way.</a>
+                  <span className="post-title">How to take images of your house the right way.</span>
 
                   <span className="post-date">June 20, 2019</span>
 
@@ -45,11 +45,11 @@ export default class Footer extends Component {
                 <h5>Tags</h5>
                   <div className="tags-container">
 
-                    <a href="#footer">Apartment</a>
-                    <a href="#footer">New</a>
-                    <a href="#footer">Villa</a>
-                    <a href="#footer">Luxurious</a>
-                    <a href="#footer">Modern</a>
+                    <span>Apartment</span>
+                    <span>New</span>
+                    <span>Villa</span>
+                    <span>Luxurious</span>
+                    <span>Modern</span>
                   </div>
               </div>
 
