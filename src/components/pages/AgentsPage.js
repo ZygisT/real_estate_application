@@ -32,7 +32,7 @@ export default class AgentsPage extends Component {
             <a className='media-link' href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fa-fw media-icon"></i></a>
           </div>
 
-          <a href="#agents-page" className="primary-btn">Read More</a>
+          <span className="primary-btn">Read More</span>          
         </div>
         </div>
       )

@@ -137,10 +137,8 @@ export default class Listings extends Component {
                   <span className="listing-location">
                     <i className="fas fa-map-marker-alt address-marker" />{listing.address}, {listing.city}, {listing.state}
                   </span>
-    
-                  <a className="primary-btn" href="#sort-by-area">
-                    Read More
-                  </a>
+
+                  <span className="primary-btn">Read More</span>
                 </div>
               </div>
             </div>
@@ -186,9 +184,7 @@ export default class Listings extends Component {
                     <i className="fas fa-map-marker-alt address-marker" />{listing.address}, {listing.city}, {listing.state}
                   </span>
     
-                  <a className="primary-btn" href="#sort-by-area">
-                    Read More
-                  </a>
+                  <span className="primary-btn">Read More</span>
                 </div>
               </div>
             </div>
