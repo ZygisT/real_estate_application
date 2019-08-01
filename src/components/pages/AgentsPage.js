@@ -24,7 +24,7 @@ export default class AgentsPage extends Component {
             <p>{item.agentDescription}</p>
           </div>
 
-          <span className="contact-number"><i className="fas fa-phone-alt fa-fw icon"></i> {item.agentContactNumber}</span>
+          <span className="contact-number"><i className="fas fa-phone fa-fw icon"></i> {item.agentContactNumber}</span>
 
           <div className="social-media-container">
             <a className='media-link' href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f fa-fw media-icon"></i></a>
@@ -32,7 +32,7 @@ export default class AgentsPage extends Component {
             <a className='media-link' href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fa-fw media-icon"></i></a>
           </div>
 
-          <a href="#agents-page" className="primary-btn">Read More</a>
+          <span className="primary-btn">Read More</span>          
         </div>
         </div>
       )

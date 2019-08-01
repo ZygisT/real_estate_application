@@ -8,6 +8,7 @@ import AboutPage from './components/pages/AboutPage';
 import BlogPage from './components/pages/BlogPage';
 import AgentsPage from './components/pages/AgentsPage';
 import ContactPage from './components/pages/ContactPage';
+import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
@@ -16,16 +17,20 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        <ScrollToTop>
 
-        <Route path="/" exact component={LandingPage} />
-        <Route path="/Listings/" component={ListingsPage} />
-        <Route path="/About/" component={AboutPage} />
-        <Route path="/Blog/" component={BlogPage} />
-        <Route path="/Agents/" component={AgentsPage} />
-        <Route path="/Contact/" component={ContactPage} />
+          <Header />
 
-        <Footer />
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/Listings/" component={ListingsPage} />
+          <Route path="/About/" component={AboutPage} />
+          <Route path="/Blog/" component={BlogPage} />
+          <Route path="/Agents/" component={AgentsPage} />
+          <Route path="/Contact/" component={ContactPage} />
+
+          <Footer />
+          
+        </ScrollToTop>
       </Router>
     </div>
   );
