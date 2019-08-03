@@ -7,6 +7,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+@font-face {
+  font-family: 'webfont';
+  font-display: swap;
+  src: url('https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.woff2') format('woff2'),
+        url('https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.woff2') format('woff2'),
+        url('https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
 h1, h2, h3, h4, h5, h6, p { 
   cursor: default;
 }
